@@ -1,0 +1,35 @@
+{
+  "name": "student-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "codeExpress.js",
+  "scripts": {
+    "start": "node Topics/MERN_NOTES/Express/codeExpress.js",
+    "dev": "nodemon Topics/MERN_NOTES/Express/codeExpress.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2",
+    "nodemon": "^3.1.14",
+    "utils": "^0.3.1",
+    "uuid": "^13.0.0",
+    "v8": "^0.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhimanyuBuilds/Coding_Question.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhimanyuBuilds/Coding_Question/issues"
+  },
+  "homepage": "https://github.com/abhimanyuBuilds/Coding_Question#readme"
+}
