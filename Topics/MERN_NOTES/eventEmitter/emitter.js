@@ -3,14 +3,14 @@ import EventEmitter from "events";
 const emitter = new EventEmitter()
 
 
-emitter.on("loginuser" , () => {
-    console.log("LoggedIn Successfully")
-});
+// emitter.on("loginuser" , () => {
+//     console.log("LoggedIn Successfully")
+// });
 
 
-emitter.on("signup" ,() => {
-    console.log("signup done successfully")
-});
+// emitter.on("signup" ,() => {
+//     console.log("signup done successfully")
+// });
 
 
 
@@ -68,13 +68,13 @@ emitter.on("signup" ,() => {
 
 // once() // Runs only once
 
-emitter.once("Login" , () => {
-    console.log("sent verification email")
-});
+// emitter.once("Login" , () => {
+//     console.log("sent verification email")
+// });
 
-emitter.emit("Login")
+// emitter.emit("Login")
 
-emitter.emit("Login")
+// emitter.emit("Login")
 
 //Output
 // sent verification email
@@ -151,5 +151,105 @@ console.log("Async");
 });
 
 });
+
+*/
+
+
+
+// Removing listners
+
+function login(){
+    console.log("Logged-In ")
+};
+
+emitter.on("login" , login)
+// syntax emitter.on("login" , callback)
+
+// node store
+{
+    login:[
+        callback
+    ]
+}
+
+
+// when
+emit("login")
+
+// Node finds
+
+// find login
+
+// loop through
+// execute each callback
+
+// internally it is almost like 
+
+// events:{
+//     login: [fn1 , fn2 , fn3]
+// }
+
+// emitter.emit("login")
+
+
+// emitter.off("login" , login)
+
+// usefull when 
+// closing connection
+// cleaning memory
+// removing subscription
+
+
+
+
+/* why this pattern exists 
+Suppose 
+
+.. user registered ..
+
+After registration
+
+you need 
+.. send email 
+.. save database
+.. Generate JWT
+.. Notify Admin
+
+without EventEmitter 
+
+
+register()
+    ↓
+sendMail()
+    ↓
+save database()
+    ↓
+Generate JWT
+    ↓
+Notify Admin
+
+Huge coupling 
+
+
+Instead 
+
+register()
+    ↓
+emit("userRegister")
+
+EveryOne else listens
+
+Mail Service 
+    ↓
+Notification 
+    ↓
+loggin
+
+Each independent 
+
+this is called  
+loose coupling
+
+
 
 */
