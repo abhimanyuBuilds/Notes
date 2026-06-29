@@ -1,3 +1,40 @@
+/**
+ * 
+ * @EventEmitter 
+ * EventEmitter is a design pattern and a built-in Node.js class that implements the 
+ * Publisher–Subscriber (Pub/Sub) pattern. It enables loose coupling by allowing objects to 
+ * emit named events and other objects to subscribe to and handle those events.
+ * 
+ * 
+ * 
+ * EventEmitter is a built-in Node.js class that lets one part of your application 
+ * announce that something happened by emitting an event,
+ * while other parts listen for that event and react without being directly connected.
+ * 
+ * 
+ * @Diagram 
+ * Publisher
+(registerUser)
+
+        |
+        | emit("userRegistered")
+        v
+
+   EventEmitter
+        |
+        +-------------------+
+        |                   |
+        v                   v
+Email Listener      Analytics Listener
+(send email)        (save analytics)
+
+
+@publisher emits the event 
+@EventEmitter delivers the event to anyone listening 
+@Subscriber ( listeners ) react to the event.
+ */
+
+
 import EventEmitter from "events";
 
 const emitter = new EventEmitter()
@@ -158,16 +195,16 @@ console.log("Async");
 
 // Removing listners
 
-function login(){
+function login() {
     console.log("Logged-In ")
 };
 
-emitter.on("login" , login)
+emitter.on("login", login)
 // syntax emitter.on("login" , callback)
 
 // node store
 {
-    login:[
+    login: [
         callback
     ]
 }
@@ -183,7 +220,7 @@ emit("login")
 // loop through
 // execute each callback
 
-// internally it is almost like 
+// internally it is almost like
 
 // events:{
 //     login: [fn1 , fn2 , fn3]
@@ -194,7 +231,7 @@ emit("login")
 
 // emitter.off("login" , login)
 
-// usefull when 
+// usefull when
 // closing connection
 // cleaning memory
 // removing subscription
