@@ -77,17 +77,17 @@
 
 // Method 1: bind() ✅
 
-const obj = {
-    name: 'Abhimanyu',
+// const obj = {
+//     name: 'Abhimanyu',
 
-    greet(){
-        setTimeout(function() {
-            console.log(`Hello ${this.name}`)
-        }.bind(this) , 1000)
-    }
-};
+//     greet(){
+//         setTimeout(function() {
+//             console.log(`Hello ${this.name}`)
+//         }.bind(this) , 1000)
+//     }
+// };
 
-obj.greet()
+// obj.greet()
 
 
 
@@ -102,5 +102,29 @@ obj.greet()
 
 // greet.call(person , "Delhi" , "+91-7983536144")
 
+
+
+//Another example
+
+// const users = {
+//     name: "Rahul"
+// }
+
+// const people = {
+//     name: "Shiv"
+// }
+
+// function printName(){
+//     console.log(this.name)
+// }
+
+
+// printName.call(users)
+
+// printName.call(people)
+
+// whenn to use call
+// Dynamic this
+// borrow methods
 
 
