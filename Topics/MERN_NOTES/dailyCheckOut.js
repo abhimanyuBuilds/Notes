@@ -15,7 +15,7 @@
  * 
 push()  ✅
 pop()   ✅
-shift()
+shift() 
 unshift()
 slice()
 splice()
@@ -715,7 +715,7 @@ How would you implement a stack using only push() and pop()?
 //================================================ End of Array ==============================
 /**
  * @String
- split() ✅
+split() ✅
 join()
 substring()
 slice()
@@ -1277,6 +1277,495 @@ LastName: Rajput
 // const paths = path.split("/")[5]
 // console.log(paths)
 
+
+
+
+
+
+
+
+
+/**@join() Method  
+ * join method convert all element of an array into a single string
+ * it join every element using a seprator that you provide 
+ * @IMPORTANT JOIN doesn't modify the original array it returns a new string.
+ * @syntax 
+ * array.join(seprators)
+ * but the original array remian same   
+ * time-complecity join o(n) because js visits every element once to build the final string
+ 
+
+// const fruits = [ "Apple" , "Orange" ,"Mango" ]
+
+// console.log(fruits.join())
+//Apple,Orange,Mango
+
+// if u dont provide a seprators it will auto-matically implement comma
+
+// const arr = [1, true, null, undefined];
+
+// console.log(arr.join("-"));
+
+// Output
+// 1-true-null-
+
+
+
+@Beginner Practice (Q1–Q5)
+
+Q1 const fruits = ["Apple", "Banana", "Mango"];
+
+Print:
+
+Apple,Banana,Mango
+
+console.log(fruits.join())
+
+Q2
+
+const fruits = ["Apple", "Banana", "Mango"];
+
+Print:
+
+Apple | Banana | Mango
+console.log(fruits.join(" | "))
+
+Q3
+
+const numbers = [10, 20, 30, 40];
+
+Print:
+
+10-20-30-40
+console.log(numbers.join("-"))
+
+Q4
+
+const letters = ["N", "o", "d", "e"];
+
+Print:
+console.log(letters.join(""))
+Node
+console.log(letters.join(""))
+
+Q5
+
+const date = ["02", "07", "2026"];
+
+Print:
+
+02/07/2026
+
+console.log(date.join("/"))
+
+
+Level 2 — Easy (Q6–Q15)
+Q6
+const colors = ["Red", "Green", "Blue"];
+
+Print:
+
+Red Green Blue
+
+
+Q7
+const marks = [85, 90, 76, 95];
+
+Print:
+
+85, 90, 76, 95
+console.log(marks.join())
+
+
+Q8
+const route = ["home", "products", "mobile"];
+
+Print:
+
+home/products/mobile
+console.log(route.join("/"))
+
+
+Q9
+const chars = ["H", "e", "l", "l", "o"];
+
+Print:
+
+Hello
+console.log(chars.join(""))
+
+Q10
+const phone = ["+91", "9876543210"];
+
+Print:
+
++91-9876543210
+
+console.log(phone.join("-"))
+
+Q11
+const skills = ["HTML", "CSS", "JavaScript"];
+
+Print:
+
+HTML -> CSS -> JavaScript
+console.log(skills.join(" -> "))
+
+Q12
+const fruits = ["Apple", "Banana", "Orange"];
+
+Print:
+
+Apple 🍎 Banana 🍎 Orange
+console.log(fruits.join(" 🍎 "))
+
+
+Q14
+
+const words = ["Backend", "Developer"];
+console.log(words.join(" "))
+Backend Developer
+
+Q15
+const binary = [1, 1, 0, 0, 1];
+console.log(binary.join(""))
+
+Level 3 — Intermediate (Q16–Q25)
+Q16
+const path = ["Users", "Abhimanyu", "Downloads", "movie.mp4"];
+
+Print:
+
+Users/Abhimanyu/Downloads/movie.mp4
+console.log(path.join("/"))
+
+
+Q17
+const css = [
+    "display:flex",
+    "justify-content:center",
+    "align-items:center"
+];
+
+Print:
+
+display:flex;justify-content:center;align-items:center
+console.log(css.join(";"))
+
+
+
+Q18
+const logs = [
+    "Server Started",
+    "Mongo Connected",
+    "Port 5000"
+];
+
+Print each item on a new line.
+console.log(logs.join("\n"))
+Server Started,Mongo Connected,Port 5000
+
+
+Q19
+const ip = [192,168,1,100];
+
+Print:
+
+192.168.1.100
+
+console.log(ip.join("."))
+
+
+192.168.1.100
+
+
+Q20❌
+const tags = ["Node","Express","MongoDB"];
+
+console.log("#" + tags.join(" #"))
+
+Q21
+const emoji = ["😀","😂","😍","🔥"];
+console.log(emoji.join(" "))
+
+Q22
+const grades = ["A","B","C","D"];
+
+console.log(grades.join(" | "))
+
+Q23
+const url = ["https:", "", "github.com", "abhimanyu"];
+
+Print
+
+https://github.com/abhimanyu
+
+
+console.log(url.join("/"))
+
+https://github.com/abhimanyu ⁉️ how two works
+
+
+
+Q24
+const technologies = [
+    "Node",
+    "Express",
+    "MongoDB",
+    "Redis"
+];
+
+Print
+
+Node, Express, MongoDB, Redis
+
+// console.log(technologies.join(" , "))
+
+
+Q25
+const filename = ["resume","pdf"];
+
+Print
+
+resume.pdf
+
+console.log(filename.join("."))
+
+
+Level 4 — Practical (Q26–Q35)
+Q26
+
+Create
+
+GET /api/v1/users
+
+using
+
+
+
+Q27 Create
+
+2026-07-02
+
+using
+
+const date = ["2026","07","02"];
+
+console.log(date.join("-"))
+
+
+Q28
+
+Convert
+
+["A","B","C","D"]
+
+into
+
+A=>B=>C=>D
+
+console.log(arr.join("=>"))
+
+
+Q29
+
+Convert
+
+["apple","banana","mango"]
+
+into
+
+apple | banana | mango
+
+console.log(fruits.join(" | "))
+
+Q30
+
+Convert
+
+["John","Alice","Bob"]
+
+output John & Alice & Bob
+console.log(arr.join(" & "))
+
+
+Q31
+
+Convert
+
+["Front-end","Back-end","DevOps"]
+
+Front-end / Back-end / DevOps
+
+console.log(arr.join(" / "))
+
+
+Q32❌
+
+Create
+
+1*2*3*4*5
+
+from
+
+[1,2,3,4,5]
+
+
+
+33
+
+Convert
+
+["M","E","R","N"]
+
+into
+
+MERN
+
+console.log(mern.join(""))
+
+
+Q34
+
+Convert
+
+["React","Node","MongoDB"]
+
+into
+
+React + Node + MongoDB
+
+const skills = ["React","Node","MongoDB"]
+
+console.log(skills.join(" + "))
+
+
+Q35
+
+Convert
+
+["10","20","30","40"]
+
+into
+
+10:20:30:40
+
+console.log(data.join(":"))
+
+
+
+
+Level 5 — Interview Level (Q36–Q45)
+Q36
+
+Given
+
+const users = [
+    {name:"John"},
+    {name:"Alice"},
+    {name:"Bob"}
+];
+
+Output
+
+John, Alice, Bob
+
+// const names = users.map(user => (user.name))
+
+// console.log(names.join(", "))
+
+
+Q37
+const products = [
+    {id:101},
+    {id:102},
+    {id:103}
+];
+
+const product = products.map(prod => ( prod.id))
+
+
+// Output
+
+// 101-102-103
+// console.log(product) [ 101, 102, 103 ]
+
+
+console.log(product.join("-"))
+
+
+
+Q38
+
+Given
+
+const sentence = [
+    "JavaScript",
+    "is",
+    "awesome"
+];
+
+Output
+
+JavaScript is awesome.
+console.log(sentence.join(" "))
+
+
+Q39 Given
+
+const csv = [
+    ["Name","Age"],
+    ["John",25],
+    ["Sam",30]
+];
+
+Output
+
+Name,Age
+John,25
+Sam,30
+
+(Hint: map() + join().)
+
+const user = csv.map(us => us.join(",")).join("\n")
+console.log(user)
+
+
+Q40
+
+Given
+
+const matrix = [
+    [1,2],
+    [3,4],
+    [5,6]
+];
+
+Output
+
+1,2
+3,4
+5,6
+
+
+const mat = matrix.map( matii => matii.join(",")).join("\n")
+console.log(mat)
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 // =================================== End of String =====================================
 
 
@@ -1298,6 +1787,9 @@ destructuring
 // ================================== End of Object ========================================
 
 
+
+
+
 // =============================================== @ES6 ======================================
 
 /**
@@ -1311,6 +1803,5 @@ template literals
 destructuring
 modules
  */
-
 
 // =========================================== End of ES6 ====================================
