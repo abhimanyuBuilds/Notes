@@ -1,5 +1,5 @@
 /**
- * @REVIEWPDFDAILY  
+ * @REVIEWPDFDAILY   
  * @DSA_GUIDE    
  * @ALL_CONCEPT 1 topic daily 
  * @InterviewBit 1 question daily
@@ -9,12 +9,12 @@
 
 
 
-/**
+/**Array
  * 
  * @Array 
  * 
-push() 
-pop()
+push()  ✅
+pop()   ✅
 shift()
 unshift()
 slice()
