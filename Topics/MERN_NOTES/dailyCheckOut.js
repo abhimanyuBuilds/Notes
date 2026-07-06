@@ -716,9 +716,9 @@ How would you implement a stack using only push() and pop()?
 /**
  * @String
 split() ✅
-join()
-substring()
-slice()
+join() ✅
+substring() ✅
+slice() 
 replace()
 replaceAll()
 trim()
@@ -1278,13 +1278,6 @@ LastName: Rajput
 // console.log(paths)
 
 
-
-
-
-
-
-
-
 /**@join() Method  
  * join method convert all element of an array into a single string
  * it join every element using a seprator that you provide 
@@ -1753,6 +1746,573 @@ console.log(mat)
 
 
 */
+
+/**
+ * @Subsutring
+ * substring extract a portion of a string and return it as a new string
+ * Does not modify the original string
+ * @Returns a new string
+ * use start index and end index
+ * end index is not included
+ * @syntax string.Substring(startIndex , endIndex)
+ * 
+ *@Rule 
+
+If start == end
+
+Returns an empty string.
+
+const str = "Hello";
+
+console.log(str.substring(2,2));
+
+Output
+
+""
+@Rule 
+
+If start > end
+
+It swaps them automatically.
+
+const str = "JavaScript";
+
+console.log(str.substring(7,2));
+
+Actually becomes
+
+str.substring(2,7)
+
+Output
+
+vaScr
+
+This is one of the biggest interview questions.
+
+ */
+
+/**
+ * @Slice
+ * 
+ * arr.slice(start , end )
+ * start -> Inclusive 
+ * end -> Exclusive
+ * 
+ * 
+ * 
+ * 1. Get first N elements
+Input
+arr = [1,2,3,4,5]
+N = 3
+Output would be 
+[1, 2, 3 ]
+
+2. Get last N elements
+
+Input
+[1,2,3,4,5]
+N = 2
+Output
+
+[4,5]
+console.log(arr.splice(3))
+const arr = [1,2,3,4,5]
+
+console.log(arr.slice(- 2))
+
+
+
+3. Remove first element without modifying original
+
+Input
+[10,20,30,40]
+Output
+[20,30,40]
+
+
+console.log(arr.slice(1))
+const arr = [10,20,30,40]
+console.log(arr.slice(1))
+
+
+4. Remove last element
+
+Input
+[10,20,30,40]
+Output
+[10,20,30]
+
+// const arr = [10,20,30,40]
+
+// console.log(arr.slice( 0 , 3 ))
+
+
+5. Copy an array
+
+Without using
+
+spread (...)
+Array.from()
+
+Only use slice().
+
+
+
+
+// const arr = [ 12 , 14 , 16 , 20 , 22 ]
+
+// const copies = arr.slice(0)
+
+// console.log(copies)
+
+
+
+6. Extract middle three elements
+
+Input
+
+[1,2,3,4,5,6,7]
+
+Output
+
+[3,4,5]
+
+
+// const arr = [1,2,3,4,5,6,7]
+
+
+// console.log(arr.slice(2 , 3))❌
+
+Level 2 (Medium)
+7. Split array into two halves
+
+Input
+
+[1,2,3,4,5,6]
+
+Output
+
+First Half:
+[1,2,3]
+
+Second Half:
+[4,5,6]
+
+
+const arr = [1, 2, 3, 4, 5, 6]
+const firstHalf = arr.slice(0, 3)
+const SecondHalf = arr.slice(-3)
+
+console.log(firstHalf)
+console.log(SecondHalf)
+
+
+
+
+
+
+8. Rotate array left by K  ❌
+
+Input
+
+[1,2,3,4,5]
+K=2
+
+Output
+
+[3,4,5,1,2]
+
+Hint
+
+slice(K)
+slice(0,K)
+
+
+
+// const arr = [ 1 , 2 , 3 , 4 , 5]
+
+// const arrleft = arr.slice(2)
+// const arrRight = arr.slice(0 , 2)
+
+// const combineIt = arrRight.push(arrleft)
+// console.log(combineIt)
+
+
+
+10. Remove first K elements
+
+Input
+
+[1,2,3,4,5]
+K=3
+
+Output
+
+[4,5]
+
+
+
+const arr = [ 1 , 2 , 3 , 4 , 5]
+
+console.log(arr.slice(3))
+
+
+
+
+
+11. Remove last K elements
+
+Input
+
+[1,2,3,4,5]
+K=2
+Output
+[1,2,3]
+
+
+
+const arr = [1,2,3,4,5]
+
+console.log(arr.slice(0 , 3))
+
+
+
+
+12. Extract every element except first and last
+Input
+[10,20,30,40,50]
+Output
+[20,30,40]
+
+console.log(arr.slice(1 , 4))
+const arr = [10,20,30,40,50]
+
+console.log(arr.slice(1 , 3))
+
+13. Split array into chunks of size 3
+
+Input
+[1,2,3,4,5,6,7]
+Output
+[
+ [1,2,3],
+ [4,5,6],
+ [7]
+]
+
+
+console.log(arr.sllice(0 , 2))
+
+
+const arr = [1,2,3,4,5,6,7]
+const first = arr.slice(0 , 3)
+const second = arr.slice(3 , 6)
+const third = arr.slice(6)
+console.log([ first , second , third])
+
+
+
+
+15. Rotate array left by K
+
+Input:
+[1,2,3,4,5]
+K = 2
+
+Output:
+[3,4,5,1,2]
+
+const arr = [1,2,3,4,5]
+
+console.log(arr.slice( 2))
+
+
+19. Replace the element at index K with 100
+Input:
+[1,2,3,4,5]
+K = 2
+
+Output:
+[1,2,100,4,5]
+
+
+11. Get the last three elements using negative indexing
+Input:
+[1,2,3,4,5,6]
+
+Output:
+[4,5,6]
+
+
+const arr = [1,2,3,4,5,6]
+console.log(arr.slice(-3))
+
+
+
+12. Remove first three elements
+Input:
+const arr = [10,20,30,40,50,60]
+
+Output:
+[40,50,60]
+
+console.log(arr.slice(2))
+console.log(arr.slice(3))
+
+
+
+13. Clone only first half of an array
+Input:
+[2,4,6,8,10,12]
+
+Output:
+[2,4,6]
+const arr = [2,4,6,8,10,12]
+
+console.log(arr.slice(3))
+
+
+
+14. Extract the middle half
+Input:
+[1,2,3,4,5,6,7,8]
+
+Output:
+[3,4,5,6]
+
+
+
+const arr = [1,2,3,4,5,6,7,8]
+
+console.log(arr.slice(2 , 6))
+
+
+
+Level 3 (Logic Building)
+15. Rotate array left by one
+Input:
+const arr = [1,2,3,4,5]
+
+Output:
+[2,3,4,5,1]
+
+
+const arr = [1,2,3,4,5]
+ 
+const left = arr.slice(1 , 5)
+const right = arr.slice(0 , 1)
+
+
+const result = left.concat(right)
+
+console.log(result)
+
+
+16. Rotate array right by one
+Input:
+[1,2,3,4,5]
+
+Output:
+[5,1,2,3,4]
+
+
+
+const arr = [1,2,3,4,5]
+
+const last = arr.slice(4)
+const first = arr.slice(0,4)
+console.log(last.concat(first))
+
+
+
+
+
+17. Rotate left by K
+Input:
+arr = [1,2,3,4,5]
+k = 2
+
+Output:
+[3,4,5,1,2]
+
+
+
+
+const arr = [1,2,3,4,5]
+
+const leftRotate = arr.slice( 0 , 2)
+const rightRotate = arr.slice(2 , 5)
+console.log(rightRotate)
+console.log(leftRotate)
+console.log(rightRotate.concat(leftRotate))
+
+
+
+
+18. Rotate right by K
+Input:
+arr = [1,2,3,4,5]
+k = 2
+
+Output:
+[4,5,1,2,3]
+
+
+const arr = [1, 2, 3, 4, 5]
+
+const lastTwo = arr.slice(3)
+console.log(lastTwo)
+const first = arr.slice(0 , 3)
+console.log(first)
+
+console.log(lastTwo.concat(first))
+
+
+19. Swap first and second half
+Input:
+[1,2,3,4,5,6]
+
+Output:
+[4,5,6,1,2,3]
+
+const arr = [1,2,3,4,5,6]
+
+const lasthalf = arr.slice(3)
+const firsthalf = arr.slice(0 , 3)
+console.log(lasthalf.concat(firsthalf))
+
+
+20. Reverse only first half
+Input:
+[1,2,3,4,5,6]
+
+Output:
+[3,2,1,4,5,6]
+
+
+
+8. Remove Element at Index K
+Input
+arr = [1,2,3,4,5]
+K = 2
+
+
+const arr = [ 1,2,3,4,5 ]
+const k = 2
+
+const left = arr.slice( 0 , k )
+
+const right = arr.slice( k + 1)
+
+const result = left.concat(right)
+console.log(result)
+
+19. Replace Element at Index K
+Input
+arr = [1,2,3,4,5]
+K = 2
+Replace with 100
+
+const left = arr.slice(0 , K)
+console.log(left)
+const right = arr.slice(K+1)
+console.log(right)
+const result = left.concat([100] , right)
+
+console.log(result)
+
+
+20. Insert Element at Index K
+Input
+arr = [1,2,4,5]
+K = 2
+Insert 3
+
+
+
+const arr = [1,2,4,5]
+const K = 2
+const left = arr.slice(0 , K)
+const right = arr.slice(K )
+const result = left.concat([3] , right)
+console.log(result)
+Output [1,2,3,4,5]  
+
+
+
+
+
+22. Extract all elements except the middle one
+Input:
+[1,2,3,4,5]
+
+Output:
+[1,2,4,5]
+
+
+const arr = [1,2,3,4,5]
+const K = 2
+const left = arr.slice(0 , K)
+const right = arr.slice( K + 1)
+
+console.log(left.concat(right))
+
+
+23. Swap first and last element without modifying the middle
+Input:
+[10,20,30,40]
+
+Output:
+[40,20,30,10]
+
+
+const arr = [10,20,30,40]
+
+const first = arr.slice(0 , 1)
+const middle = arr.slice(1 , 3)
+console.log(middle)
+const last = arr.slice(3)
+console.log(first)
+console.log(last)
+const last2 = last.concat(middle)
+console.log(last2.concat(first))
+
+
+
+Level 4 (Interview Style)
+24. Chunk an array into groups of size K
+Input:
+[1,2,3,4,5,6,7]
+k = 3
+
+Output:
+[
+ [1,2,3],
+ [4,5,6],
+ [7]
+]
+
+
+
+const arr = [1,2,3,4,5,6,7]
+
+
+
+const K = 3
+
+for ( let i = 0 ; i < arr.length; i += K){
+    // console.log(arr.slice(i , i+K))
+    // console.log(i)
+    console.log(i+K)
+}
+
+ */
+
+
+
+
+
+
 
 
 

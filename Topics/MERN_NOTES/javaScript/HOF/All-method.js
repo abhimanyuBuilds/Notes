@@ -1,5 +1,5 @@
 /**
- * 
+ *@MUSTMETHOD
  * forEach()
  * map()
  * filter()
@@ -8,7 +8,6 @@
  * some()
  * every()
  * sort()
- * 
  * 
  * @Advanced HOF
  * 
@@ -26,7 +25,7 @@
  * debounce/ throttle API protection
  * 
  * 
-* @Frontend-Specific Higher Order Functions
+ * @Frontend-Specific Higher Order Functions
 1. React.memo   Performance
 2. Higher Order Components (HOC)  Reusable Logic
 3. Debounced search  UX
