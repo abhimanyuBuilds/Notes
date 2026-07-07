@@ -2306,10 +2306,28 @@ for ( let i = 0 ; i < arr.length; i += K){
     console.log(i+K)
 }
 
+
+
+25. Paginate an array
+Input:
+arr = [1,2,3,4,5,6,7,8,9]
+page = 2
+limit = 3
+
+Output:
+[4,5,6]
+
+
  */
 
+let page = 2
+let limit = 3
 
 
+const arr = [1,2,3,4,5,6,7,8,9]
+
+const page2 = arr.slice(limit , 6 )
+console.log(page2)
 
 
 
