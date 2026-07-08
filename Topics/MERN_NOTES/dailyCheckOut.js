@@ -5,6 +5,7 @@
  * @InterviewBit 1 question daily
  */
 
+
 // ====================================  Question ===================================
 
 
@@ -15,7 +16,7 @@
  * 
 push()  ✅
 pop()   ✅
-shift() 
+shift()  
 unshift()
 slice()
 splice()
@@ -718,8 +719,8 @@ How would you implement a stack using only push() and pop()?
 split() ✅
 join() ✅
 substring() ✅
-slice() 
-replace()
+slice()     ✅
+replace()   ✅
 replaceAll()
 trim()
 includes()
@@ -2318,16 +2319,415 @@ Output:
 [4,5,6]
 
 
+// let page = 2
+// let limit = 3
+
+
+// const arr = [1,2,3,4,5,6,7,8,9]
+
+// const page2 = arr.slice(limit , 6 )
+// console.log(page2)
+
+
  */
 
-let page = 2
-let limit = 3
+/**Replace()
+ * Practice Questions
+Level 1 — Basics
+Question 1
+const str = "I like Java";
+
+Replace "Java" with "Node".
+
+Expected Output
+
+I like Node
+
+const result = str.replace("Java" , "Node.js")
+console.log(result)
 
 
-const arr = [1,2,3,4,5,6,7,8,9]
 
-const page2 = arr.slice(limit , 6 )
-console.log(page2)
+Question 2
+const str = "apple apple apple";
+
+Replace only the first "apple" with "orange".
+
+Expected Output
+
+orange apple apple
+
+const result = str.replace("apple" ,"orange")
+console.log(result)
+
+
+Question 3
+const str = "Hello World";
+
+Replace the space with -.
+
+Expected Output
+
+Hello-World
+
+
+const result = str.replace(" " , "-")
+console.log(result)
+
+
+
+Question 4
+const str = "1,2,3,4";
+
+Replace the first comma with |.
+
+Expected Output
+
+1|2,3,4
+
+
+const str = "1,2,3,4";
+
+const result = str.replace("," , "|")
+
+console.log(result)
+
+
+
+Question 5
+const str = "NodeJS";
+
+Replace "JS" with "JavaScript".
+
+Expected Output
+
+NodeJavaScript
+
+
+
+const result = str.replace("JS" , "JavaScript")
+console.log(result)
+
+
+Level 2 — Global Replacement
+Question 6
+const str = "apple apple apple";
+
+Replace every "apple" with "orange".
+
+Expected Output
+
+orange orange orange
+
+
+const result = str.replace(/apple/g , "orange")
+console.log(result)
+
+
+Question 7
+const str = "1 2 3 4";
+
+Replace every space with -.
+
+Expected Output
+
+1-2-3-4
+
+
+const result = str.replace(/ /g , "-" )
+console.log(result)
+
+
+Question 8
+const str = "Hello Hello Hello";
+
+Replace every "Hello" with "Hi".
+
+Expected Output
+
+Hi Hi Hi
+
+
+const result = str.replace(/Hello/g , "Hi")
+console.log(result)
+
+
+
+Question 9
+const str = "abc123xyz456";
+
+Replace every digit with #.
+
+Expected Output
+
+abc###xyz###
+const result = str.replace(/\d/g , "#")
+console.log(result)
+
+Question 10
+const str = "JavaScript";
+
+Replace every vowel with *.
+
+Expected Output
+
+J*v*Scr*pt
+const result = str.replace(/[aeiou]/gi ,"*"  )
+
+
+
+Level 3 — Case-Insensitive Replacement
+Question 11
+const str = "Java JAVA java JaVa";
+
+Replace every version of "java" with "Node".
+
+Expected Output
+
+Node Node Node Node
+
+
+const result = str.replace(/java/gi , 'Node')
+
+
+
+
+
+Question 15 – Replace Special Characters
+New Concept: [^a-zA-Z0-9]
+^ inside [] means not
+So this pattern matches anything that is not:
+a-z
+A-Z
+0-9
+Question
+const str = "Hello@World#2026!";
+
+Replace every special character with _.
+
+const result = str.replace(/[^a-zA-Z0-9]/gi , "_")
+16
+
+Question 17 – Rearrange a Date
+New Concept: Multiple Capturing Groups
+
+Input:
+
+2026-07-07
+
+Capture:
+
+Year
+Month
+Day
+
+Then rearrange them.
+
+Question
+const str = "2026-07-07";
+
+Expected Output
+
+07/07/2026
+
+const str = "2026-07-07";
+
+const result = str.replace(/(\d{4})-(\d{2})-(\d{2})/ , 
+    "$3/$2/$1"
+
+
+
+
+Question 18 – Callback Function
+New Concept: Dynamic Replacement
+
+Instead of a fixed replacement string, you can provide a function.
+
+The function receives the matched text and returns the replacement.
+
+Question
+const str = "Price 10 and 20";
+
+Double every number.
+
+Expected Output
+
+Price 20 and 40
+
+const result = str.replace(/\d+/gi, (match) => {
+    return Number(match) * 2
+});
+
+
+
+Question 20 – Title Case
+Question
+const str = "javascript is awesome";
+
+Convert the first letter of every word to uppercase.
+
+Expected Output
+
+Javascript Is Awesome
+
+    const result = str.replace(/\b\w/g , (upper) => {
+        return String(upper).toUpperCase()
+    })
+
+
+Question 19 – Wrap Every Number
+Question
+const str = "A1 B2 C3";
+
+Wrap every number inside square brackets.
+
+Expected Output
+
+A[1] B[2] C[3]
+
+const result = str.replace(/\d+/g , (data) => `[${data}]`)
+
+
+
+
+
+Question 16 – Capturing Groups
+New Concept: ()
+
+Parentheses create capturing groups.
+
+Example:
+
+John Doe
+Group 1 → John
+Group 2 → Doe
+
+You can reuse them in the replacement string:
+
+$1 → first group
+$2 → second group
+Question
+const str = "John Doe";
+
+Convert it to:
+
+Doe, John
+
+const result = str.replace( 
+    /(\w+)\s(\w+)/, 
+    "$2 , $1"
+
+);
+
+    */
+
+/**replaceAll()
+Example 4 Double Every Number
+const str = "10 20 30";
+
+const result = str.replaceAll(/\d+/g, (match) => {
+    return match * 2;
+});
+
+console.log(result);
+Output
+20 40 60
+
+
+Level 1 – Double Every Number (\d+)
+const str = "Price 10 and 20";
+
+Expected Output
+
+Price 20 and 40
+
+const result = str.replaceAll(/\d+/g , (match) => Number(match)*2)
+
+
+Level 2 – Wrap Every Number (\d+)
+const str = "A100 B25 C9";
+
+Expected Output
+
+A[100] B[25] C[9]
+const result = str.replaceAll(/\d+/g , (data) => `[${[data]}]`)
+
+Level 3 – Add 5 to Every Number (\d+)
+const str = "Age 18, Score 95";
+
+Expected Output
+
+Age 23, Score 100
+
+const result = str.replaceAll(/\d+/g , (match) => Number(match)+5)
+
+
+Level 4 – Triple Every Number (\d+)
+const str = "5 apples and 12 oranges";
+
+Expected Output
+
+15 apples and 36 oranges
+const result = str.replaceAll(/\d+/g , (match) => Number(match)*3)
+
+
+
+Level 5 – Replace Every Digit with * (\d)
+const str = "Room 123, Floor 45";
+
+Expected Output
+
+Room ***, Floor **
+
+const result = str.replaceAll(/\d/g , "*")
+
+
+Level 6 – Increment Every Digit (\d)
+const str = "12345";
+
+Expected Output
+
+23456
+
+
+const result = str.replaceAll(/\d/g , (match) => Number(match)+1)
+
+
+Level 7 – Square Every Digit (\d)
+const str = "234";
+
+Expected Output
+
+4916
+const result = str.replaceAll(/\d/g , (match) => Number(match)**2)
+
+
+Level 8 – Put Every Digit in Parentheses (\d)
+const str = "A12B3";
+
+Expected Output
+
+A(1)(2)B(3)
+
+const result = str.replaceAll(/\d+/g , (match) => `(${[match]})`)
+
+
+
+Level 9 – Add Commas Around Every Number (\d+)
+const str = "Item100 Price250 Qty3";
+
+Expected Output
+
+Item,100, Price,250, Qty,3,
+
+const result = str.replaceAll(/\d+/g , (match) => `,${[match]},`)
+
+ */
+
+
+
+
+
 
 
 
@@ -2383,3 +2783,32 @@ modules
  */
 
 // =========================================== End of ES6 ====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
