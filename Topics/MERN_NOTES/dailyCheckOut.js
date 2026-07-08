@@ -16,9 +16,9 @@
  * 
 push()  ✅
 pop()   ✅
-shift()  
-unshift()
-slice()
+shift()  ✅
+unshift() 
+slice() 
 splice()
 concat()
 sort()
@@ -709,7 +709,181 @@ How would you implement a stack using only push() and pop()?
 
 */
 
+// ========================= Question on Shift() =================================
 
+/**Shift()
+ * Return first element of occurence
+ * changes (mutable) the original array
+ * Remove it from original array
+
+const arr = [ 10 , 20 , 30 ]
+
+const result = arr.shift()
+console.log(result)
+
+const arr = [ 10 , 20 , 30 ]
+
+const result = arr.shift()
+console.log(result) // 10
+console.log(arr)  // [ 20 , 30 ]
+
+
+Question 7
+const arr = [10, 20, 30];
+Expected Output
+
+30
+[30]
+
+console.log(arr.shift() + arr.shift())
+console.log(arr)
+
+
+Q-8 
+const arr = [5, 6, 7];
+
+Expected Output
+
+[6,7,5]
+
+
+
+const arr = [5, 6, 7];
+
+let  first = arr.shift()
+
+arr.push(first)
+console.log(arr)
+
+
+Level 3 (Interview Level)
+Question 11
+
+Remove all elements using only shift().
+
+const arr = [1,2,3,4,5];
+
+// Your Code
+
+Expected Output
+
+[]
+
+
+const arr = [1,2,3,4,5];
+const len = arr.length
+for ( let i = 0 ; i < len ; i++){
+    arr.shift()
+}
+
+console.log(arr)
+
+-- 2nd method
+
+while (arr.length > 0) {
+    arr.shift()
+}
+console.log(arr)
+
+Question 12
+
+Find the sum of all elements using only shift().
+
+const arr = [10,20,30,40];
+
+// Output:
+// 100
+
+
+
+
+const arr = [10,20,30,40];
+
+    let sum = 0
+    while(arr.length > 0){
+        sum += arr.shift()
+    }
+console.log(sum)
+
+
+
+Question 13
+
+Print only even numbers using shift().
+
+const arr = [3,4,7,8,10,11];
+
+Expected Output
+
+4
+8
+10
+
+
+const arr = [3,4,7,8,10,11];
+
+while ( arr.length > 0 ){
+   const num =  arr.shift()
+
+    if(num % 2 === 0){
+        console.log(num)
+    }
+}
+
+Question 14
+
+Create a copy of an array using only shift() and push().
+
+const arr = [1,2,3];
+
+Expected Output
+
+Original:
+[]
+
+Copy:
+[1,2,3]
+
+
+
+const arr = [1,2,3];
+let arr2  = [];
+while(arr.length){
+    const original = arr.shift()
+    arr2.push(original)
+}
+
+console.log("original Array",arr)
+console.log(arr2)
+
+
+
+
+
+Question 15
+
+Reverse an array using shift() (without using reverse()).
+
+const arr = [1,2,3,4];
+
+Expected Output
+
+[4,3,2,1]
+
+
+const arr = [1,2,3,4];
+let arr2 =[]
+while(arr.length > 0 ){
+    const original = arr.shift()
+    arr2.unshift(original)
+}
+console.log(arr2)
+
+
+ */
+
+
+// ========================== End of shift() ======================================
 
 
 
@@ -721,8 +895,8 @@ join() ✅
 substring() ✅
 slice()     ✅
 replace()   ✅
-replaceAll()
-trim()
+replaceAll() ✅
+trim()       
 includes()
 startsWith()
 endsWith()
