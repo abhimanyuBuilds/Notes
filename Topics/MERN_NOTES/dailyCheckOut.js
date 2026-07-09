@@ -17,9 +17,9 @@
 push()  ✅
 pop()   ✅
 shift()  ✅
-unshift() 
-slice() 
-splice()
+unshift() ✅
+slice() ✅
+splice()✅
 concat()
 sort()
 reverse()
@@ -884,7 +884,199 @@ console.log(arr2)
 
 
 // ========================== End of shift() ======================================
+// ============================= Question on unshift() =======================
+/**Unshift() 
+ * @Syntax array.unshift(element)
+ * @rule can insert multiple element returns new array length , works with any data-types  time - complexity is o(n)
+ * @Example  
+ * const arr = [ 121 , 321 , 443 , 553 ]
+ arr.unshift(1)
+ console.log(arr)
+ 
+ if you want a length of a array then 
 
+ const arr = [ 1021 , 11031 , 102010 ]
+
+ const length = arr.unshift(1)
+ console.log(length)
+
+
+ Question 4
+
+Add 100, 200, and 300 at the beginning.
+
+const arr = [400,500];
+
+arr.unshift(100 , 200 , 300)
+
+console.log(arr)
+
+
+
+Question 5
+
+Store the returned length.
+
+const arr = [1,2,3];
+
+Expected Output
+
+length = 4
+
+array
+
+[0,1,2,3]
+
+const length = arr.unshift(0)
+
+console.log("length = ",length)
+console.log(arr)
+
+
+
+
+
+Medium Level
+Question 6
+
+Without creating another array, add "Admin" at the beginning.
+
+const users = ["John","David","Alex"];
+
+Expected Output
+
+["Admin","John","David","Alex"]
+users.unshift("Admin")
+console.log(users)
+
+
+
+Question 7
+Using a loop and unshift(), reverse the array.
+
+const arr = [1,2,3,4];
+
+Expected Output
+
+[4,3,2,1]
+
+
+const arr = [1,2,3,4];
+let arr2 = []
+while ( arr.length > 0){
+   const original =  arr.shift()
+    arr2.unshift(original)
+}
+
+console.log(arr2)
+
+
+Question 9
+Insert "Start" only if it is not already the first element.
+
+const arr = ["HTML","CSS"];
+
+Expected Output
+
+["Start","HTML","CSS"]
+const arr = ["HTML","CSS"];
+
+if(arr[0] === "Start"){
+    console.log(arr)
+}else{
+    arr.unshift("Start")
+}
+console.log(arr)
+
+
+
+
+
+
+Question 10
+Create this array using only unshift().
+Start with:
+
+const arr = [];
+
+Expected Output
+
+[1,2,3,4,5]
+
+
+
+
+const arr  = []
+for ( let i =  5; i >= 1 ; i-- ){
+        arr.unshift(i)
+    }
+
+console.log(arr)
+
+
+
+
+
+
+
+
+Hard Level
+Question 11
+Reverse the array using only:
+shift()
+unshift()
+
+No reverse(), push(), pop(), or indexing.
+
+const arr = [1,2,3,4];
+
+Expected Output
+
+[4,3,2,1]
+
+
+const arr = [ 1 , 2 , 3 , 4 ]
+const arr2 = []
+const len = arr.length;
+for ( let i = 1 ; i <= len ; i++){
+    arr.shift(i)
+    arr2.unshift(i)
+}
+console.log(arr2)
+
+
+
+
+
+Question 12
+
+Move the first two elements to the end using only:
+
+shift()
+push()
+unshift()
+const arr = [1,2,3,4,5];
+
+Expected Output
+
+[3,4,5,1,2]
+
+
+
+const arr = [1,2,3,4,5];
+let arr2 = []
+
+arr.push(arr.shift())
+arr.push(arr.shift())
+console.log(arr)
+ */
+
+
+
+
+
+
+// ============================== End of unshift() ==========================
 
 
 //================================================ End of Array ==============================
@@ -895,8 +1087,8 @@ join() ✅
 substring() ✅
 slice()     ✅
 replace()   ✅
-replaceAll() ✅
-trim()       
+replaceAll()✅
+trim()        
 includes()
 startsWith()
 endsWith()
