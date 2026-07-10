@@ -330,3 +330,50 @@ Object	        Returned instead of this
 
 
 
+/**Phase 3: Prototype
+Topics
+What is prototype?
+Solution---> every every normal function in js automatically gets a property called prototypes
+
+
+
+function Person(){}
+
+console.log(Person.prototype);
+
+
+//Output 
+
+{
+constructor: Person
+}
+
+js will create this object automatically
+
+
+Function
+
+Person
+   │
+   │ has
+   ▼
+
+prototype
+
+{
+   constructor: Person
+}
+
+
+This object is shared by every object created using new Person();
+const arr = [];
+
+console.log(arr.__proto__);
+console.log(Array.prototype);
+
+Why do we use prototype?
+Memory optimization
+Shared methods
+Prototype object
+Practice:
+ */
