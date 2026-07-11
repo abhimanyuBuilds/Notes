@@ -109,9 +109,8 @@ y1.startCar()
 /**Encapsulation
  * @Encapsulation
  * 
- */
-
-
+ * 
+ * 
 class BankAccount{
     #balance = 900 ;
 
@@ -153,8 +152,122 @@ b1.withdraw(1000)
 
 b1.AvailableBalance()
 
+ */
+
+
+
+/**Polymorphism with static method
+ * @POLYMORPHISM is a way to that in a class we have same method but it behave differently
+ * 
+ * static method will always call by their class it-self not by their object or other object 
+ * 
+ * 
+ * can we have multiple same name method in class to achive polymorphism
+ * No. In JavaScript, you cannot have two methods with the same name in the same class. The later one simply overwrites the earlier one.
+
+Example
+class Animal {
+    speak() {
+        console.log("First");
+    }
+
+    speak() {
+        console.log("Second");
+    }
+}
+
+const a = new Animal();
+a.speak();
+ * 
+
+
+
+Then how does polymorphism work?
+
+JavaScript primarily supports runtime polymorphism through method overriding.
+
+Example:
+
+class Animal {
+    speak() {
+        console.log("Animal speaks");
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        console.log("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    speak() {
+        console.log("Cat meows");
+    }
+}
+
+const dog = new Dog();
+const cat = new Cat();
+
+dog.speak();
+cat.speak();
+
+Output
+
+Dog barks
+Cat meows
+
+Each class provides its own implementation of the same method.
+============================================End of important ===========================
 
 
 
 
 
+
+
+
+ *  
+class bird {
+    static fly(){
+        return `Hi I'm Flying...`
+    }
+}
+
+class Penguin {
+    fly(){
+        return `Hi i can't fly`
+    }
+}
+
+const v1 = new bird()
+const v2 = new Penguin()
+
+console.log(bird.fly())
+console.log(v2.fly())
+
+ * 
+ */
+
+
+
+class calculator  {
+    ihve(a , b){
+        return a + b 
+    }
+
+    ihve(a , b){
+        return a - b
+    }
+
+    ihve( a , b ){
+        return a * b
+    }
+
+    ihve( a , b){
+        return a / b
+    }
+}
+
+const v1 = new calculator()
+console.log(v1.ihve(12 , 19))
