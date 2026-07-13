@@ -1,6 +1,15 @@
 /**OOPS in nothing but a palagdrim where we use to organise our code in around objects 
  * 
- * @SUPER
+ * @SUPER 
+ * it is used to inside a child class to access the parent class
+ * it has two main use 
+ * call the parent class constructor
+ * call the parent class methods
+ * always super come first (must call super constructor before calling this)
+ * if u call super after this an Error will occour Refrence Error ReferenceError:
+ * Must call super constructor before accessing 'this'
+ * 
+ * 
  * @class 
  * @ENCAPSULATION
  * @ABSTRACTION
@@ -251,23 +260,39 @@ console.log(v2.fly())
 
 
 
-class calculator  {
-    ihve(a , b){
-        return a + b 
-    }
+// class calculator  {
+//     ihve(a , b){
+//         return a + b 
+//     }
 
-    ihve(a , b){
-        return a - b
-    }
+//     ihve(a , b){
+//         return a - b
+//     }
 
-    ihve( a , b ){
-        return a * b
-    }
+//     ihve( a , b ){
+//         return a * b
+//     }
 
-    ihve( a , b){
-        return a / b
-    }
-}
+//     ihve( a , b){
+//         return a / b
+//     }
+// }
 
-const v1 = new calculator()
-console.log(v1.ihve(12 , 19))
+// const v1 = new calculator()
+// console.log(v1.ihve(12 , 19))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
