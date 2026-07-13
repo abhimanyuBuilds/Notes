@@ -34,6 +34,8 @@ Linear Search both backward              ✅
 
 
 
+
+
 *Traversing array (Traversing an array means accessing every element of the array one by one.)   
 
 *******************   {Why Traversing is Used    ***********************
@@ -1160,5 +1162,7 @@ project_admin 2 [ 'admin', 'member', 'project_admin' ]
 // console.log("End")
 
 // BEFORE_DSA.pdf
+
+
 
 

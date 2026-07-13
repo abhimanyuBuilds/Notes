@@ -875,3 +875,68 @@ console.log("third largest:",result.thirdLargest())
 // }
 
 // twoSum( data , target)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// factorial
+
+// -- HCLTECH
+/**
+ * function Factorial(num){
+    let result = 1
+    for ( let i = 1 ; i <= num;  i++){
+        result = result * i
+    }
+    return result
+}
+
+console.log(Factorial(5))
+ * 
+ */
+
+// find prime number
+// prime number logic is if number is divisible by only its number or by 1
+
+
+// function isPrime(num){
+//     if(num < 2){
+//         return false
+//     }
+//     for ( let i = 2 ;i * i <= num ; i++){
+//         console.log(`i = ${i} , i*i= ${i * i}`)
+//         if(num % i === 0 ){
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// console.log(isPrime(5))
+
+// function isPrime(num) {
+//     if (num < 2) {
+//         return false;
+//     }
+
+//     for (let i = 2; i * i > num; i++) {
+
+//         if (num % i === 0) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+// console.log(isPrime(19));

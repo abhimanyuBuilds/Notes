@@ -20,8 +20,8 @@ shift()  ✅
 unshift() ✅
 slice() ✅
 splice()✅
-concat()
-sort()
+concat() ✅
+sort()   
 reverse()
 includes()
 indexOf()
@@ -1071,12 +1071,346 @@ arr.push(arr.shift())
 console.log(arr)
  */
 
-
-
-
-
-
 // ============================== End of unshift() ==========================
+// =============================== Question on concat ===================
+/**@concat 
+ * it combine one or multiple array into one and does not change existing one create a new one
+ * does not modify the original one 
+ * Question 1
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+Expected Output
+[1, 2, 3, 4, 5, 6]
+
+const result = arr1.concat(arr2)
+
+console.log(result)
+
+
+
+
+
+Question 2
+const fruits = ["Apple", "Banana"];
+const vegetables = ["Potato", "Tomato"];
+Expected Output
+["Apple", "Banana", "Potato", "Tomato"]
+
+
+
+const result = fruits.concat(vegetables)
+
+console.log(result)
+
+
+
+Question 4
+const first = ["A"];
+const second = ["B"];
+const third = ["C"];
+Expected Output
+["A", "B", "C"]
+
+const result = first.concat(second , third)
+console.log(result)
+
+
+
+Question 5
+const arr = [10, 20];
+
+Append the value 30 using only concat().
+
+Expected Output
+[10, 20, 30]
+
+
+const result = arr.concat(30)
+console.log(result)
+
+
+Question 9
+const arr1 = [];
+const arr2 = [5, 10, 15];
+Expected Output
+[5, 10, 15]
+
+const result = arr1.concat(arr2)
+
+
+console.log(result)
+
+
+
+Question 10
+const html = ["HTML"];
+const css = ["CSS"];
+const js = ["JavaScript"];
+const node = ["Node.js"];
+Expected Output
+["HTML", "CSS", "JavaScript", "Node.js"]
+
+
+
+const result = html.concat(css , js , node)
+
+console.log(result)
+
+ */
+
+// ================================ End of concat =========================
+
+// ============================== Question on SORT =====================
+
+/**
+ * @Question 1
+
+Sort the following array using only sort().
+
+const fruits = ["Orange", "Apple", "Banana", "Mango"];
+Expected Output
+["Apple", "Banana", "Mango", "Orange"] 
+
+
+fruits.sort()
+console.log(fruits)
+
+
+Question 2
+
+Sort the following array.
+
+const colors = ["Blue", "Red", "Black", "Green"];
+Expected Output
+["Black", "Blue", "Green", "Red"]
+
+colors.sort()
+console.log(colors)
+
+
+
+Question 3
+
+Predict the output.
+
+const arr = [5, 20, 100, 1];
+
+arr.sort();
+
+console.log(arr);
+Expected Output
+
+❓ Predict what will be printed.
+
+
+const arr = [5, 20, 100, 1];
+arr.sort();
+
+console.log(arr); // 1 , 100 , 20 , 5
+
+
+Question 4
+
+Sort the array.
+
+const cities = ["Delhi", "Mumbai", "Agra", "Pune"];
+Expected Output
+["Agra", "Delhi", "Mumbai", "Pune"]
+
+
+cities.sort()
+console.log(cities)
+
+
+const arr = [50, 7, 100];
+
+
+Rule 3: Sorting numbers correctly
+To sort numbers, we give JavaScript a compare function.
+
+
+
+numbers.sort((a, b) => a - b);
+
+Now JavaScript compares the numbers themselves instead of their string forms.
+
+
+
+const numbers = [25,3,100,40];
+numbers.sort((a,b)=>a-b);
+console.log(numbers);
+numbers.sort((a, b) => a - b);
+console.log(numbers)
+
+
+Rule 2: Descending Order (Large → Small)
+numbers.sort((a, b) => b - a);
+
+const numbers = [25,3,100,40];
+numbers.sort((a, b) => b - a);
+
+console.log(numbers)
+
+
+Question 7 — Negative Numbers
+const numbers = [-5, 10, -20, 0, 15];
+Expected Output (Ascending)
+[-20, -5, 0, 10, 15]
+
+numbers.sort((a , b) => a - b)
+console.log(numbers)
+
+
+Question 8 — Decimal Numbers
+const numbers = [4.5, 2.1, 8.9, 1.3, 6.7];
+Expected Output (Ascending)
+[1.3, 2.1, 4.5, 6.7, 8.9]
+
+
+numbers.sort((a , b ) => a - b)
+console.log(numbers)
+
+
+
+Question 9 — Duplicate Values
+const numbers = [5, 2, 8, 5, 1, 2];
+Expected Output (Ascending)
+[1, 2, 2, 5, 5, 8]
+
+
+
+numbers.sort((a , b) => a - b)
+console.log(numbers)
+
+
+
+Question 10 ⭐ Challenge
+
+Sort the following array in descending order.
+
+const temperatures = [28, -5, 14, 40, 0, 18];
+Expected Output
+[40, 28, 18, 14, 0, -5]
+
+temperatures.sort((a , b ) => b - a)
+
+console.log(temperatures)
+
+
+
+
+
+
+Question 1 — Sort Objects by Age (Ascending)
+const users = [
+    { name: "Rahul", age: 25 },
+    { name: "Aman", age: 19 },
+    { name: "Neha", age: 30 },
+    { name: "Priya", age: 22 }
+];
+
+
+users.sort((a, b) => a.age - b .age )
+console.log(users)
+
+
+
+
+
+Question 2 — Sort Objects by Salary (Descending)
+const employees = [
+    { name: "John", salary: 55000 },
+    { name: "Alice", salary: 90000 },
+    { name: "Bob", salary: 70000 },
+    { name: "David", salary: 45000 }
+];
+
+employees.sort((a , b ) => b.salary  - a.salary)
+console.log(employees)
+
+
+
+
+Question 3 — Sort Strings by Length
+const words = [
+    "elephant",
+    "cat",
+    "apple",
+    "hi",
+    "javascript"
+];
+
+words.sort((a , b ) => a.length - b.length)
+console.log(words)
+
+
+
+
+Question 4 — Longest String First
+const languages = [
+    "JS",
+    "Python",
+    "Java",
+    "C",
+    "TypeScript"
+];
+
+
+
+languages.sort((a , b ) => b.length - a.length)
+
+
+console.log(languages)
+
+
+
+Question 5 — Even Numbers First
+const numbers = [5, 8, 1, 6, 2, 9, 4, 3];
+Expected Output
+[8, 6, 2, 4, 5, 1, 9, 3]
+
+Keep the even numbers before the odd numbers
+*/
+
+
+
+
+
+
+
+
+// =========================== End of sort ==========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //================================================ End of Array ==============================
