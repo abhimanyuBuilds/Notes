@@ -21,9 +21,9 @@ unshift() ✅
 slice() ✅
 splice()✅
 concat() ✅
-sort()   
-reverse()
-includes()
+sort()   ✅
+reverse() ✅
+includes() ✅
 indexOf()
 find()
 findIndex()
@@ -1372,20 +1372,170 @@ Expected Output
 Keep the even numbers before the odd numbers
 */
 
-
-
-
-
-
-
-
 // =========================== End of sort ==========================
 
 
+// ======================= Question on Reverse ========================
+/**
+Rule of reverse()
+Rule 1: reverse() reverses the order of elements in an array.
+array.reverse() it changes (mutates) the original array
+it also returns the same array
+
+
+Example 1
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.reverse();
+
+console.log(numbers);
+
+//output
+[5, 4, 3, 2, 1]
+
+Example 2
+const fruits = ["Apple", "Banana", "Orange"];
+
+fruits.reverse();
+console.log(fruits);
+Output
+["Orange", "Banana", "Apple"]
+
+ */
+
+// ======================== End of reverse ============================
+
+// ======================= Question on includes() =====================
+
+/** Rule - 1 check whether an array contains a specific value or not
+ * syntax 
+ * arrray.includes(valueToFInd , fromArray)
+ * 
+ *@Parameter ( valueToFind) the value you want to search 
+fromArray The index from which you want to searching
+
+return value 
+true  -- if it exists
+false -- if the value does not exit
+
+Example - 1
+
+
+const fruits = ['Apple' , 'Banana' , 'Orange']
+
+console.log(fruits.includes("Banana"))
+
+
+result = true 
+
+Understanding fromIndex 
+const numbers = [  10 , 20 , 30 , 40 , 50 , 20 ]
+
+
+console.log(numbers.includes(20 , 2))
+
+result = true
+
+10 , 20 , 30 , 40 , 50 , 20
+0    1    2    3    4     5
+            ↑
+            start searching from index
 
 
 
+Question 7
+const arr = ["apple", "banana"];
 
+console.log(arr.includes("Apple"));
+Output
+false -- includes() is case-sensitive.
+
+
+Question 8
+const arr = [10, 20, 30];
+console.log(arr.includes("20"));
+Output
+false
+// becuase it is case-sensitive
+
+It uses strict equality (===) for comparison, so the type must also match.
+
+ */
+
+
+// ======================= End of includes() ==========================
+
+// ======================= Question on indexOF ========================
+
+/** Rule of indexOf()
+@Rule 1: indexOf() returns the index (position) of the first occurrence of a value in an array.
+Syntax
+array.indexOf(searchElement, fromIndex) 
+
+@Return Value
+it does not modify the original array
+Returns the index if the value is found.
+Returns -1 if the value is not found.
+
+const arr = [5, 10, 15, 20];
+
+console.log(arr.indexOf(15));
+output -- 2
+
+
+--Question-2
+const arr = ["JS", "Node", "React"];
+
+console.log(arr.indexOf("Express"));
+output = -1
+
+
+
+const arr = [10, 20, 30, 20];
+
+console.log(arr.indexOf(20));
+// indexof return the first index
+-- output 1
+
+
+-- Question - 3
+const arr = [10, 20, 30, 20];
+
+console.log(arr.indexOf(20, 2));
+
+3
+
+const arr = ["A", "B", "C", "D"];
+
+console.log(arr.indexOf("A", 1));
+
+--output 
+ -1
+
+
+ 
+const arr = ["apple", "banana"];
+
+console.log(arr.indexOf("Apple"));
+
+indexOf is case sensitive
+
+-1
+
+Question
+const arr = [10, 20, 30];
+
+console.log(arr.indexOf("20"));
+--output
+-1 
+
+
+Because:
+
+20 !== "20"
+*/
+
+// ======================== End of indexOF ============================
 
 
 
