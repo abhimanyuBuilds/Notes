@@ -14,18 +14,18 @@
  * 
  * @Array 
  * 
-push()  ✅
-pop()   ✅
-shift()  ✅
+push()    ✅
+pop()     ✅
+shift()   ✅
 unshift() ✅
-slice() ✅
-splice()✅
-concat() ✅
-sort()   ✅
+slice()   ✅
+splice()  ✅
+concat()  ✅
+sort()    ✅
 reverse() ✅
-includes() ✅
-indexOf()
-find()
+includes()✅
+indexOf() ✅
+find()    
 findIndex()
 filter()
 map()
@@ -1536,19 +1536,6 @@ Because:
 */
 
 // ======================== End of indexOF ============================
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
