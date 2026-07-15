@@ -23,14 +23,14 @@ splice()  ✅
 concat()  ✅
 sort()    ✅
 reverse() ✅
-includes()✅
+includes()✅   true / false
 indexOf() ✅
-find()    
+find()    ✅  find only select first element but filter give all array
 findIndex()
 filter()
 map()
 reduce()
-some()
+some()    find only select first element but filter give all array --- some true / false
 every()
  */
 
@@ -1534,9 +1534,97 @@ Because:
 
 20 !== "20"
 */
-
 // ======================== End of indexOF ============================
 
+
+// ======================= Question of find() ========================
+
+/**Rule on find
+ * 
+ * find search and return the first matching element
+ * 
+ * @syntax 
+ * array.find((element , index , array) => {
+ * return condition
+ * })
+ * 
+ * it does not modify original array
+ * it is case - sensitive also
+ * 
+//Example 1 
+
+const numbers = [ 10 , 20 , 30 , 40 , 50 ]
+
+const gt = numbers.find((num) => {
+    return num > 30
+})
+
+console.log(gt)
+
+
+
+const fruits = [ 'apple' , 'lichi' , 'banana']
+
+const result = fruits.find((frt) => {
+    return frt === "apple"
+})
+
+console.log(result)
+
+
+
+const numbers = [5,12,18,25,40];
+
+
+const result = numbers.find((even) => {
+    return even % 2 === 0 
+})
+
+
+console.log(result)
+
+
+
+
+
+const products = [
+
+    {
+        name:"Laptop",
+        price:80000
+    },
+
+    {
+        name:"Mouse",
+        price:1000
+    },
+
+    {
+        name:"Keyboard",
+        price:3000
+    }
+
+];
+
+
+const result = products.find((item) => {
+    return item.price > 5000
+})
+
+console.log(result)
+
+
+ */
+
+
+
+
+
+
+
+
+
+// ======================== End of find ==============================
 
 
 
