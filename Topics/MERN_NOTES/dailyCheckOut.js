@@ -1616,16 +1616,159 @@ console.log(result)
 
  */
 
-
-
-
-
-
-
-
-
 // ======================== End of find ==============================
 
+// ========================  Question on findIndex() =======================
+
+/**findIndex()
+ * @Rule 
+ * array.findIndex((element , index , array) => {
+ * // condition
+ * })
+ * 
+ * stop searching after finding the first match index
+ * Doesn't modify original array
+ * stop immediately after finding the first match
+ * return -1 if no element is found
+ * return the index not the value
+
+let numbers = [ 10 , 20 , 30 , 40 , 50 , 60 ]
+
+const result = numbers.findIndex((num) => num === 40)
+console.log(result)
+
+
+
+let names = ["Rahul","Aman","Abhi","Rohan"];
+
+let index = names.findIndex(name => name.startsWith("A"));
+
+console.log(index);
+
+
+let users = [ 
+    {
+        id: 1,
+        name: 'Abhi'
+    },
+    {
+        id: 2,
+        name: 'raj'
+    },
+    {
+        id: 3 ,
+        name: 'Aman'
+    }
+];
+
+let index = users.findIndex(user => user.id === 2)
+
+console.log(index)
+
+
+
+let marks = [ 121 , 331 , 4431 , 4838 , 19301]
+
+let result = marks.findIndex( mark => mark >= 400)
+console.log(result)
+
+
+Question 1 (Easy)
+Find the index of the first negative number.
+
+let numbers = [15,20,-5,30,-8];
+
+Expected Output
+
+2
+
+let result = numbers.findIndex((num) => num < 0)
+console.log(result)
+
+
+Question 2 (Easy)
+Find the index of the first even number greater than 50.
+let numbers = [15,31,44,52,60];
+Expected Output
+3
+
+const result = numbers.findIndex((num) => num % 2 === 0  && num > 50)
+console.log(result)
+
+
+
+Question 3 (Medium)
+Find the index of the first student whose marks are greater than or equal to 90.
+
+let students = [
+    {name:"Abhi",marks:75},
+    {name:"Rahul",marks:88},
+    {name:"Aman",marks:95},
+    {name:"Karan",marks:99}
+];
+
+Expected Output
+
+2
+
+const result = students.findIndex((mark) => mark.marks >= 90)
+
+console.log(result)
+
+
+Question 4 (Medium)
+
+Find the index of the first product that is out of stock.
+
+let products = [
+    {
+        name:"Laptop",
+        stock:10
+    },
+    {
+        name:"Mouse",
+        stock:0
+    },
+    {
+        name:"Keyboard",
+        stock:5
+    }
+];
+
+
+const outofStock = products.findIndex((stocks) => stocks.stock === 0)
+console.log(outofStock)
+
+Question 5 (Interview Level)
+
+Find the index where the array stops being sorted in ascending order.
+
+let numbers = [10,20,30,45,50,40,60];
+
+Expected Output
+
+5
+ */
+
+
+// let numbers = [10,20,30,45,50,40,60];
+
+
+// num = current element 
+// index = current index
+// array = the original array
+
+
+// const sorted = numbers.findIndex((num ,i ,arr ) => {
+//     return  i > 0 && num < arr[i-1]
+// })
+// console.log(sorted)
+
+
+
+
+
+// =========================== End of findIndex() ==========================
 
 
 
