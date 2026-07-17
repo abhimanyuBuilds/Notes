@@ -26,7 +26,7 @@ reverse() ✅
 includes()✅   true / false
 indexOf() ✅
 find()    ✅  find only select first element but filter give all array
-findIndex()
+findIndex()✅
 filter()
 map()
 reduce()
@@ -1765,11 +1765,174 @@ Expected Output
 // console.log(sorted)
 
 
-
-
-
 // =========================== End of findIndex() ==========================
+// ========================== Question on Filter ====================
 
+/**@Rule of filter
+ * array.filter((element , index , array ) => {
+ * // return true or false
+ * })
+ * 
+ * it always return a new array 
+ * Original array does not change
+ * 
+ * 
+ * 
+ * Rule 5: You can use index
+let fruits = ["apple","mango","banana"];
+
+let result = fruits.filter((item,index)=>{
+
+    return index !== 1;
+
+});
+console.log(result);
+Output
+["apple","banana"]
+
+
+
+
+Rule 6: Works with Objects
+let users = [
+
+    {name:"Abhi",age:22},
+    {name:"Rohan",age:17},
+    {name:"Aman",age:25}
+
+];
+let result = users.filter(user=>user.age>=18);
+
+console.log(result);
+
+
+Easy Questions
+Question 1
+let numbers = [10,15,20,25,30];
+
+Expected Output
+
+[20,30]
+
+Return numbers greater than 15.
+
+const result = numbers.filter((num) => num > 15 && num !== 25)
+console.log(result)
+
+
+
+Question 2
+let numbers = [1,2,3,4,5,6,7,8];
+Expected Output
+[2,4,6,8]
+Return only even numbers.
+
+
+const result = numbers.filter((num) => num % 2 === 0)
+console.log(result)
+
+
+
+
+
+Question 3
+let words = ["apple","kiwi","banana","cat","mango"];
+Expected Output
+["apple","banana","mango"]
+
+Return words having more than 4 characters.
+
+
+const result = words.filter((x) => x.length > 4)
+console.log(result)
+
+
+Medium Questions
+Question 4
+let users = [
+
+    {name:"Abhi",active:true},
+    {name:"Rohan",active:false},
+    {name:"Aman",active:true},
+    {name:"Kunal",active:false}
+
+];
+Expected Output
+[
+ {name:"Abhi",active:true},
+ {name:"Aman",active:true}
+]
+
+
+const result = users.filter((x) => x.active === true);
+console.log(result)
+
+
+
+Question 5
+let students = [
+
+    {name:"A",marks:95},
+    {name:"B",marks:35},
+    {name:"C",marks:76},
+    {name:"D",marks:25}
+
+];
+Expected Output
+[
+ {name:"A",marks:95},
+ {name:"C",marks:76}
+]
+
+const result = students.filter((x)=> x.marks >= 40)
+console.log(result)
+
+
+
+let products = [
+
+    {
+        name:"Laptop",
+        price:60000,
+        inStock:true
+    },
+
+    {
+        name:"Mouse",
+        price:500,
+        inStock:false
+    },
+
+    {
+        name:"Keyboard",
+        price:2000,
+        inStock:true
+    },
+
+    {
+        name:"Monitor",
+        price:15000,
+        inStock:true
+    }
+
+];
+Conditions:
+
+Product should be in stock.
+Price must be greater than 1000.
+Price must be less than 20000.
+
+
+const result = products.filter((x)=> x.inStock=== true && x.price > 1000 && x.price<20000)
+
+console.log(result)
+ */
+
+
+
+
+
+// ========================== End of filter ========================
 
 
 
