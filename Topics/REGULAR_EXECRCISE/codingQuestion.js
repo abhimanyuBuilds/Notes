@@ -14,7 +14,6 @@
 //     }
 // }
 
-// console.log(maxValue);
 
 
 
