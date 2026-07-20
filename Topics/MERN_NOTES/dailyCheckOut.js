@@ -27,8 +27,8 @@ includes()✅   true / false
 indexOf() ✅
 find()    ✅  find only select first element but filter give all array
 findIndex()✅
-filter()
-map()
+filter()    ✅
+map()      ✅
 reduce()
 some()    find only select first element but filter give all array --- some true / false
 every()
@@ -1927,13 +1927,137 @@ const result = products.filter((x)=> x.inStock=== true && x.price > 1000 && x.pr
 
 console.log(result)
  */
-
-
-
-
-
 // ========================== End of filter ========================
 
+
+
+// ======================= Question on MAP() =============================
+
+/**
+ * @Map Rule 
+ * map always return a new array
+ * 
+ */
+
+/**
+ * 
+ * Interview Questions
+Question 1
+let prices = [100,200,300,400];
+
+Expected Output
+[90,180,270,360]
+Apply 10% discount using map().
+
+let prices = [100,200,300,400];
+
+const discount10P = prices.map((onPrice) =>  {
+    return onPrice - ( onPrice / 100 * 10 )
+}
+    
+ );
+
+Question 2
+let names = ["john","harry","sam"];
+
+Expected Output
+
+["John","Harry","Sam"]
+
+Capitalize the first letter.
+
+
+
+
+
+
+
+Question 3
+let users = [
+
+    {
+        name:"Abhimanyu",
+        age:24
+    },
+
+    {
+        name:"Rahul",
+        age:18
+    },
+
+    {
+        name:"Karan",
+        age:30
+    }
+
+];
+
+const adult = users.map((user) => user.age >= 18 ? 'Adult' : 'not Adult')
+
+console.log(adult)
+
+ */
+
+// let names = ["john","harry","sam"];
+
+
+// const firstLetter = names.map((name) => name[0].toUpperCase())
+// console.log(firstLetter)
+
+
+
+// Expected Output
+
+// let orders = [
+
+//     {
+//         id:1,
+//         amount:2000
+//     },
+
+//     {
+//         id:2,
+//         amount:5000
+//     },
+
+//     {
+//         id:3,
+//         amount:1000
+//     }
+
+// ];
+
+// const tax = orders.map((order) => {
+//     return {
+//     ...order,
+//     tax: order.amount * 18 / 100 
+
+// }
+// });
+
+
+// console.log(tax)
+
+
+// Question 2
+// let names = ["john","harry","sam"];
+
+// const upperCase = names.map((name) => {
+//     return name[0].toUpperCase() + name.slice(1)
+// });
+// console.log(upperCase)
+
+// Expected Output
+
+// ["John","Harry","Sam"]
+
+// Capitalize the first letter.
+
+// console.log(discount10P)
+
+
+
+// ========================== End of MAP() ===============================
 
 
 
@@ -1953,7 +2077,7 @@ substring() ✅
 slice()     ✅
 replace()   ✅
 replaceAll()✅
-trim()        
+trim()
 includes()
 startsWith()
 endsWith()
@@ -2510,15 +2634,15 @@ LastName: Rajput
 // console.log(paths)
 
 
-/**@join() Method  
+/**@join() Method
  * join method convert all element of an array into a single string
- * it join every element using a seprator that you provide 
+ * it join every element using a seprator that you provide
  * @IMPORTANT JOIN doesn't modify the original array it returns a new string.
- * @syntax 
+ * @syntax
  * array.join(seprators)
- * but the original array remian same   
+ * but the original array remian same
  * time-complecity join o(n) because js visits every element once to build the final string
- 
+
 
 // const fruits = [ "Apple" , "Orange" ,"Mango" ]
 
@@ -2987,8 +3111,8 @@ console.log(mat)
  * use start index and end index
  * end index is not included
  * @syntax string.Substring(startIndex , endIndex)
- * 
- *@Rule 
+ *
+ *@Rule
 
 If start == end
 
@@ -3001,7 +3125,7 @@ console.log(str.substring(2,2));
 Output
 
 ""
-@Rule 
+@Rule
 
 If start > end
 
@@ -3025,18 +3149,18 @@ This is one of the biggest interview questions.
 
 /**
  * @Slice
- * 
+ *
  * arr.slice(start , end )
- * start -> Inclusive 
+ * start -> Inclusive
  * end -> Exclusive
- * 
- * 
- * 
+ *
+ *
+ *
  * 1. Get first N elements
 Input
 arr = [1,2,3,4,5]
 N = 3
-Output would be 
+Output would be
 [1, 2, 3 ]
 
 2. Get last N elements
@@ -3330,7 +3454,7 @@ Output:
 
 
 const arr = [1,2,3,4,5]
- 
+
 const left = arr.slice(1 , 5)
 const right = arr.slice(0 , 1)
 
@@ -3468,7 +3592,7 @@ const left = arr.slice(0 , K)
 const right = arr.slice(K )
 const result = left.concat([3] , right)
 console.log(result)
-Output [1,2,3,4,5]  
+Output [1,2,3,4,5]
 
 
 
@@ -3763,7 +3887,7 @@ Expected Output
 
 const str = "2026-07-07";
 
-const result = str.replace(/(\d{4})-(\d{2})-(\d{2})/ , 
+const result = str.replace(/(\d{4})-(\d{2})-(\d{2})/ ,
     "$3/$2/$1"
 
 
@@ -3844,8 +3968,8 @@ Convert it to:
 
 Doe, John
 
-const result = str.replace( 
-    /(\w+)\s(\w+)/, 
+const result = str.replace(
+    /(\w+)\s(\w+)/,
     "$2 , $1"
 
 );
