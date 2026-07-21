@@ -29,7 +29,7 @@ find()    ✅  find only select first element but filter give all array
 findIndex()✅
 filter()    ✅
 map()      ✅
-reduce()
+reduce()   
 some()    find only select first element but filter give all array --- some true / false
 every()
  */
@@ -1996,7 +1996,6 @@ const adult = users.map((user) => user.age >= 18 ? 'Adult' : 'not Adult')
 
 console.log(adult)
 
- */
 
 // let names = ["john","harry","sam"];
 
@@ -2058,9 +2057,232 @@ console.log(adult)
 
 
 // ========================== End of MAP() ===============================
+*/
+
+// =============================== Question on Reduce =====================
+
+/**Reduce
+ *  Example 
+ * sum 
+ * const arr=[10,20,30];
+
+const result=arr.reduce((acc,num)=>{
+
+    return acc+num;
+
+},0);
+
+
+console.log(result);
+ * Output : 60
+
+
+Interview Question 2
+Largest Number
+const arr=[2,7,1,90,30];
+
+
+const result = arr.reduce((acc , curr) => acc > curr ? acc : curr)
+
+console.log(result)
+::: Output : 90
+
+
+Interview Question 3
+Count Elements
+const fruits=[
+
+"apple",
+"banana",
+"apple",
+"orange",
+"apple"
+
+];
+
+const fruits=[
+
+"apple",
+"banana",
+"apple",
+"orange",
+"apple",
+"kiwi"
+
+];
+
+
+const counting = fruits.reduce((acc , curr) =>  {
+    acc[curr] = (acc[curr] || 0)+1
+
+    return acc
+},{})
+
+console.log(counting)
 
 
 
+const arr = [ 2 , 4 , 6]
+
+const result=
+
+arr.reduce((acc,num)=>{
+
+    acc.push(num*2);
+
+    return acc;
+
+},[]);
+
+
+console.log(result);
+
+
+
+
+
+
+==========================
+Level 1 (Easy)
+map()
+1. Double all numbers
+
+[1,2,3,4]
+
+Expected:
+[2,4,6,8]
+
+const result =  arr.reduce((acc , curr) => {
+    acc.push(curr*2)
+    return acc
+},[])
+
+console.log(result)
+
+======
+
+2. Convert names to uppercase
+
+["abhi","rahul","rohan"]
+
+Expected:
+["ABHI","RAHUL","ROHAN"]
+
+
+const upperCases = name.reduce((acc , curr) => {
+    acc.push(curr.toUpperCase())
+    return acc
+},[])
+
+console.log(upperCases)
+
+
+======
+3. Add ₹5000 bonus to every salary
+
+[20000,30000,40000]
+
+Expected:
+[25000,35000,45000]
+
+
+const result = salary.reduce((acc , curr) => {
+    acc.push(curr+5000)
+    return acc
+},[])
+
+console.log(result)
+
+======
+
+
+4. Add "Mr." before every name
+
+["Aman","Raj","Shiv"]
+
+Expected:
+["Mr. Aman","Mr. Raj","Mr. Shiv"]
+
+
+
+const result = name.reduce((acc , curr) => {
+    acc.push("Mr."+ curr)
+    return acc
+},[])
+
+console.log(result)
+
+====
+
+filter()
+5. Return only even numbers
+
+[2,5,7,8,10,15]
+
+
+const evens = nums.reduce((acc , curr) => {
+    if(curr%2===0){
+        acc.push(curr)
+    }
+    return acc
+},[]);
+
+console.log(evens)
+
+
+6. Return users older than 18
+
+[
+{name:"Abhi",age:24},
+{name:"Rahul",age:17},
+{name:"Shiv",age:28}
+]
+
+
+const result = obj.reduce((acc , curr) => {
+if(curr.age > 18){
+    acc.push(curr)
+}
+return acc
+},[])
+console.log(result)
+
+
+const marks=[
+
+50,
+60,
+70,
+90
+
+];
+
+Expected:
+
+67.5
+
+// find average marks
+
+const marks=[
+
+50,
+60,
+70,
+90
+
+];
+
+let data;
+const result = marks.reduce((acc  ,  curr )=> {
+   return   acc + curr
+},0);
+
+const average = result / marks.length
+console.log(average)
+
+ */
+
+// ================================ End of Reduce
 
 
 
