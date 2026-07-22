@@ -29,8 +29,8 @@ find()    ✅  find only select first element but filter give all array
 findIndex()✅
 filter()    ✅
 map()      ✅
-reduce()   
-some()    find only select first element but filter give all array --- some true / false
+reduce()    ✅ 
+some()   ✅ find only select first element but filter give all array --- some true / false
 every()
  */
 
@@ -2284,9 +2284,69 @@ console.log(average)
 
 // ================================ End of Reduce
 
+/** ============================= Question on Some ========================= 
+ * 
+ * some() checks every element until it finds the first matching element
+ * if one element passes  stop immediately and returns true
+ * 
+ * @Syntax 
+array.some((currentValue, index, array) => {
+    return condition;
+});
+
+Parameters
+currentValue -> Current item
+index        -> Current index (optional)
+array        -> Original array (optional)
+
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.some((num) => num > 3)
+console.log(result)
+
+ */
 
 
 
+/** ============================ Question on Every =========================
+ * 
+ * @every
+ * @Syntax
+ * 
+ * array.every((currentValue, index, array) => {
+    return condition;
+});
+
+
+const numbers = [ 2 , 4 , 6 , 8]
+const result = numbers.every((num) => num % 2 === 0);
+console.log(result);
+
+
+
+
+const lectures = [
+    { title: "HTML", watched: true },
+    { title: "CSS", watched: true },
+    { title: "JS", watched: true }
+];
+const result = lectures.every((lecture) => lecture.watched === true );
+console.log( result )
+
+// true 
+
+-- However if we changed the one true to false 
+then it give false becuase every iterate on every element
+
+
+const lectures = [
+    { title: "HTML", watched: true },
+    { title: "CSS", watched: true },
+    { title: "JS", watched: false }
+];
+const result = lectures.every((lecture) => lecture.watched === true );
+
+*/
 
 
 
@@ -2299,7 +2359,7 @@ substring() ✅
 slice()     ✅
 replace()   ✅
 replaceAll()✅
-trim()
+trim()✅
 includes()
 startsWith()
 endsWith()
@@ -4302,26 +4362,110 @@ const result = str.replaceAll(/\d+/g , (match) => `,${[match]},`)
  */
 
 
+/** -------------------------- Question on Trim() ----------------------------
+ * 
+Important Rule
+trim() only removes spaces from:
+Beginning
+End
+
+It does NOT remove spaces in the middle.
+
+const str = "Hello     World";
+
+console.log(str.trim());
+
+
+Behind the Scenes
+"   Abhimanyu   "
+ ^^^           ^^^
+ Removed       Removed
+
+
+Result:
+"Abhimanyu"
+
+
+Original String Is Not Changed
+const name = "   Rahul   ";
+
+name.trim();
+
+console.log(name)
 
 
 
 
 
+trim the value
 
+const users = [
+    "  Abhi ",
+    " Rahul",
+    "Shiv   "
+];
 
+----- For trim their are two more methods like trimStart() trimEnd()
 
+const result = users.map((name) => name.trim())
+console.log(result)
 
-
-
-
-
-
-
-
-
+ */
 
 
 // =================================== End of String =====================================
+
+/** ----------------------- Question on includes() --------------------------------------
+ * 
+ * includes work with both string as well as array
+ * 
+ * in array it has syntax example
+ * 
+ * array.includes(valueToFind , startIndex)
+ * 
+ * 
+ * in String it has syntax example 
+ * 
+ * String.includes(searchString);
+ * 
+ * Always return boolean
+ * does not modify original string
+ * Uses strict equailty ===
+ * 
+ * import limitation includes() work great with primitive values
+ * --- check if abhi is present 
+ * const users = [
+    {name:"Abhi"},
+    {name:"Rahul"}
+];
+
+
+const users = [
+    {name:"Abhi"},
+    {name:"Rahul"}
+];
+
+// const name = users.includes((include) => {
+//     include.name === 'Abhi'
+// });
+// console.log(name)
+
+// false becuase object are compared by refrence not by value
+
+// use some for that
+const name = users.some((n) => n.name === 'Abhi')
+console.log(name) 
+
+
+const permissions = ['read', 'write', 'delete']
+
+const hasPermissions =  permissions.includes("delete",1)
+console.log(hasPermissions)
+
+
+ */
+
+
 
 
 // ================================ @Object =============================================
