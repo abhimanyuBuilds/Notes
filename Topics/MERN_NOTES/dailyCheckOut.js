@@ -2360,10 +2360,10 @@ slice()     ✅
 replace()   ✅
 replaceAll()✅
 trim()✅
-includes()
-startsWith()
-endsWith()
-repeat()
+includes() ✅
+startsWith()✅
+endsWith()✅
+repeat()✅
 charAt()
 charCodeAt()
  */
@@ -4464,6 +4464,107 @@ console.log(hasPermissions)
 
 
  */
+
+/** ---------------------------- Question on StartWith() --------------------------
+ * It returns a Boolean (true or false).
+It is case-sensitive.
+It does not modify the original string.
+
+
+
+ * @Syntax
+ * string.startsWith(searchString, position)
+ * 
+ * const file = 'image.png'
+console.log(file.startsWith('i',0));
+ * 
+ * 
+const url = "https://google.com";
+if( url.startsWith("https://")){
+    console.log("Yes protocol is their")
+};
+ */
+
+
+/**--------------------------- Question on Endswith() --------------------
+ * 
+ * string.endsWIth(searchString , length)
+ * const email = "Abhimanyu44@gmail.com"
+ * 
+ * if(email.endsWith('@gmail.com')){
+ * console.log("email is ending with @gmail.com")
+ * }
+ * 
+ */
+ 
+/**-------------------- Question on Repeat()---------------------
+ * @Syntax string.repeat(count);
+
+count-> Number of times to repeat the string
+Return a new string
+Does not modify the original string..
+
+
+const text = 'hi';
+
+console.log(text.repeat(3));
+
+console.log("*".repeat(8))
+
+
+useful for CLI application
+
+console.log("-".repeat(10));
+console.log("User detail");
+console.log("-".repeat(10));
+
+
+ */
+
+
+/**------------------- Question on at() , charAt() , codePointAt() , charCodeAt() ----------------
+ * At support Negative Indexing returns character
+ * 
+ * CharAt() does not support negative indexing return character
+ * 
+ * charCodeAt() return UTF16-code
+ * 
+ * 
+ * codePointAt() Return Unicode code point
+ * 
+ * 
+ * 
+ * Get Last Character
+const filename = "resume.pdf";
+console.log(filename.at(-1))
+
+ * 
+
+
+const username = "Abhimanyu";
+
+if(username.charAt(0) === 'A'){
+    console.log("Yes it has")
+}
+
+
+console.log('i'.charCodeAt(0)) // 105
+
+
+const str = "Hello";
+
+// Output:
+
+// e
+// o
+// 72
+console.log(str.charAt(1))
+console.log(str.at(-1))
+console.log(str.charCodeAt(0))
+
+
+ */
+
 
 
 
