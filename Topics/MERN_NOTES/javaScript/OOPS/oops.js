@@ -1,6 +1,6 @@
 /**OOPS in nothing but a palagdrim where we use to organise our code in around objects 
  * 
- * @SUPER 
+ * @SUPER  call the parent constructor
  * it is used to inside a child class to access the parent class
  * it has two main use 
  * call the parent class constructor
@@ -19,10 +19,67 @@
  * WE CAN ACHIVE POLYMORPHISM WITH DIFFERENT WAYS LIKE 
  *      |
  * METHOD OVER-RIDING
+ * 
+ * 
+ * Method Overriding
+class Animal {
+    sound() {
+        console.log("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+    sound() {
+        console.log("Bark");
+    }
+}
+
+const dog = new Dog();
+dog.sound();
  * METHOD OVER-LOADING
+
+/**
+ *Method Overloading
+
+In Java:
+
+add(int a, int b)
+add(int a, int b, int c)
+
+JavaScript does NOT support this:
+
+class Calculator {
+    add(a, b) {
+        console.log(a + b);
+    }
+
+    add(a, b, c) {
+        console.log(a + b + c);
+    }
+}
+
+Only the last method exists.
+
+const c = new Calculator();
+
+c.add(1, 2, 3); // 6
+ */
+/**
  * 
  * 
- * 
+
+javaScript does not support method overloading 
+Solution /// or way to achive 
+
+class Calculator {
+    add(...numbers) {
+        return numbers.reduce((a, b) => a + b);
+    }
+}
+
+console.log(new Calculator().add(1, 2));
+console.log(new Calculator().add(1, 2, 3, 4));
+ 
  */
 
 /**Inheritance
@@ -59,7 +116,7 @@ class Child extends Parent {
     }
     vote(){
         if(this.CanadianCitizen && this.ownHouse){
-            return `${this.childName} yes you can vote you're parents are canadian citizen ${this.CanadianCitizen}\n you have a house too `
+            return `${this.childName} yes you can vote your parents are canadian citizen ${this.CanadianCitizen}\n you have a house too `
         }else if(this.CanadianCitizen){
             return `${this.childName} you can vote and but you don't have house`
         }else{
@@ -85,8 +142,38 @@ console.log(v1.vote())
  */
 
 
-/**Abstraction
+/**Abstraction Hide implementation details and shows only necessary Information.
  * @Abstraction
+
+Best example
+
+class CoffeeMachine {
+    makeCoffee() {
+        this.#boilWater();
+        console.log("Coffee Ready");
+    }
+
+    #boilWater() {
+        console.log("Boiling Water");
+    }
+}
+
+const coffee = new CoffeeMachine();
+
+coffee.makeCoffee();
+
+User only knows:
+
+coffee.makeCoffee();
+
+They don't know:
+
+How water boils
+Temperature
+Internal process
+
+
+------------------------------------------------------------
 
 class Car{
     injectFuel(){
@@ -115,7 +202,7 @@ y1.startCar()
 
  */
 
-/**Encapsulation
+/**Encapsulation Binding data and methods together and restricting direct access.
  * @Encapsulation
  * 
  * 
@@ -294,5 +381,39 @@ console.log(v2.fly())
 
 
 
+/**
+ * Q - 1 Is javaScript is Truly Object-oriented?
+ * 
+ * Solution :::   javaScript is protoType based object oriented language..
+ */
 
 
+
+/** Q - 14. What Are Static Methods?
+ Static Method that belongs to the class , not instances
+
+Static methods belong to the class itself, not to the object.
+
+class MathUtil {
+    static add(a, b) {
+        return a + b;
+    }
+}
+
+console.log(MathUtil.add(10, 20));
+
+
+
+❌ this will fail 
+const m = new MathUtil();
+
+m.add(1, 2);
+
+m/add 
+ */
+
+
+/**What is this keyword..
+ * this refers to the object that is currently executing the code.
+ * 
+ */
