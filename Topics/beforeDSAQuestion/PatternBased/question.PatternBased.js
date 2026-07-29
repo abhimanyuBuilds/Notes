@@ -75,7 +75,7 @@ u1.printInc()
  */
 
 
-  
+
 /** Q - 3 print increasing triangle with Increasing numbers
 1
 12
@@ -247,5 +247,46 @@ u1.printPyramid()
 
 
 
+
+ */
+
+
+
+
+/** Inverted Pyramid 
+
+
+
+ *********
+  *******
+   *****
+    ***
+     *
+
+
+
+let n = 5;
+
+class Solution {
+    printMethod() {
+        for (let i = 0; i < n; i++) {
+            let rows = ""
+            for (let j = 0; j < i; j++) {
+                rows += " "
+            }
+            for (let j = 0; j < 2 * n - (2 * i + 1); j++ ){
+                rows += "*";
+            }
+            for( let j = 0 ; j < i ; j++){
+                rows += " "
+            }
+            console.log(rows)
+        }
+    }
+};
+
+const u1 = new Solution();
+
+u1.printMethod()
 
  */
