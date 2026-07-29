@@ -160,3 +160,92 @@ const u1 = new Solution();
 u1.printDesc()
 
  */
+
+
+
+/** Print Inverted 1 2 3 4 5 
+ * 1 2 3 4 5 
+ * 1 2 3 4 
+ * 1 2 3 
+ * 1 2 
+ * 1
+
+
+
+
+
+
+class Solution{
+    printMethod(){
+        for(let i = 0 ; i < 5 ; i++){
+            let rows = "";
+            for( let j = 1 ; j <= ( 5 - i) ; j++){
+                rows += j
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printMethod()
+
+ */
+
+
+/** Star pyramid 
+     *     
+    ***    
+   *****   
+  *******  
+ ********* 
+***********
+
+Logic :
+
+
+rows
+Space    ( N - i - 1 ) 
+star     ( 2 * N + 1 ) ---   2 * that's why because we expecting star by moving in ODD 1 , 3 , 5 , 7 , 9 
+space    ( N - i - 1 )
+
+
+
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+
+
+
+
+
+
+
+let N = 6
+class Solution{
+    printPyramid(){
+        for (let i = 0 ; i < N ; i++){
+            let rows = "";
+            for(let j = 0 ; j < ( N - i - 1); j++){
+                rows += " ";
+            };
+            for(let j = 0 ; j < (2 * i + 1); j++){
+                rows += "*"
+            }
+            for( let j = 0 ; j < (N - i - 1); j++){
+                rows += " "
+            }
+            console.log(rows)
+        }
+    }
+};
+
+const u1 = new Solution();
+u1.printPyramid()
+
+
+
+
+ */
