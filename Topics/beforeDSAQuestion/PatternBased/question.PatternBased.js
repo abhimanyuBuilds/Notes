@@ -290,3 +290,106 @@ const u1 = new Solution();
 u1.printMethod()
 
  */
+
+/**Q-9  Diamind Star pattern
+ 
+
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ *******
+  *****
+   ***
+    * 
+
+
+
+   
+let N = 5
+
+class Solution {
+    increaseMethod() {
+        for (let i = 0; i < N; i++) {
+            let rows = "";
+            for (let j = 0; j < (N - i - 1); j++) {
+                rows += " "
+            }
+            for (let j = 0; j < (2 * i + 1); j++) {
+                rows += "*"
+            }
+            for (let j = 0; j < (N - i - 1); j++) {
+                rows += " "
+            }
+            console.log(rows);
+        }
+    }
+    EnvertedMethof(){
+        for( let i = 0 ; i < N ; i++){
+            let rows = "";
+            for( let j = 0 ; j < i ; j++){
+                rows += " "
+            }
+            for( let j = 0 ; j < 2 * N - (2 * i + 1 ); j++){
+                rows += "*"
+            }
+            for( let j = 0; j < i ; j++ ){
+                rows += " "
+            }
+            console.log(rows)
+        }
+    }
+};
+
+const u1 = new Solution();
+u1.increaseMethod()
+u1.EnvertedMethof()
+   
+
+ */
+
+
+
+
+/**Q-10 Half Diamond Star Pattern
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+let N = 5
+class Solution{
+    printIncreseTri(){
+        for( let i = 0 ; i < N; i++){
+            let rows = "";
+            for( let j = 0 ; j < i ; j++){
+                rows += "*"
+            }
+            console.log(rows)
+        }
+    }
+    printDecTri(){
+        for(let i = 0 ; i < N ; i++){
+            let rows = ""
+            for(let j = 0 ; j < ( N - i) ; j++){
+                rows += '*'
+            }
+            console.log(rows)
+        }
+    }
+}
+const u1 = new Solution();
+u1.printIncreseTri()
+u1.printDecTri()
+
+
+ */
+
