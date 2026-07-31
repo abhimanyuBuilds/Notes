@@ -393,3 +393,77 @@ u1.printDecTri()
 
  */
 
+
+/**Binary number triangle pattern 
+
+
+1
+01
+101
+0101
+10101
+
+
+
+let n = 5
+
+class Solution{
+   printPat(){
+    for( let i = 0 ; i < n ; i++){
+        let row  = "";
+        for( let j = 0 ; j <= i ; j++ ){
+            if(( i + j ) % 2 === 0){
+                row += '1'
+            } else{
+                row += '0'
+            }
+        }
+        console.log(row)
+    }
+   }
+   }
+const u1 = new Solution();
+u1.printPat();
+ */
+
+
+
+
+/** Number crown pattern 
+
+
+-- Their are 8 Spaces
+
+
+
+1      1
+12    21
+123  321
+12344321
+
+
+
+let n = 5
+class Solution {
+    printMethod() {
+        for (let i = 0; i < n; i++) {
+            let rows = "";
+            for (let j = 1; j <= i; j++) {
+                rows += j
+            }
+            for(let j = 0 ; j < 2 * (n - i - 1); j++){
+                rows += " "
+            }
+        for (let j = i; j >= 1; j--) {
+            rows += j
+        }
+        
+        console.log(rows)
+    }
+}
+};
+const u1 = new Solution();
+u1.printMethod();
+
+
+ */
