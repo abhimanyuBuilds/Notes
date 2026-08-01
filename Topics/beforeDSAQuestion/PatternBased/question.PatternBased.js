@@ -429,12 +429,8 @@ u1.printPat();
 
 
 
-/** Number crown pattern 
-
-
+/** Q- 12 Number crown pattern 
 -- Their are 8 Spaces
-
-
 
 1      1
 12    21
@@ -467,3 +463,32 @@ u1.printMethod();
 
 
  */
+
+/**Q - 13 Increasing Number triangle pattern 
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+
+let n = 5
+class Solution{
+    printMethod(){
+        let num = 1 ;
+        for(let i = 1 ; i <= n ; i++){
+            let rows = "";
+            for( let j = 1; j <= i; j++){
+                rows += num + " ";
+                num++
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printMethod()
+
+ */
+
