@@ -395,6 +395,27 @@ u1.printDecTri()
 
 
 /**Binary number triangle pattern 
+if even then 1 
+if odd then 0 
+
+| i | j | i+j | Print |
+| - | - | --- | ----- |
+| 2 | 0 | 2   | 1     |
+| 2 | 1 | 3   | 0     |
+| 2 | 2 | 4   | 1     |
+
+
+example 
+
+Iteration 4
+i = 3
+
+| i | j | i+j | Print |
+| - | - | --- | ----- |
+| 3 | 0 | 3   | 0     |
+| 3 | 1 | 4   | 1     |
+| 3 | 2 | 5   | 0     |
+| 3 | 3 | 6   | 1     |
 
 
 1
@@ -492,3 +513,145 @@ u1.printMethod()
 
  */
 
+
+/**Q - 14 Increasing Letter Triangle Pattern
+
+A
+AB
+ABC
+ABCD
+ABCDE
+
+let n = 5
+
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n; i++ ){
+            let rows = ""
+            for(let j = 0 ; j <= i  ; j++){
+                rows += String.fromCharCode(65 + j)
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printM()
+ */
+
+
+/**Q - 15 Reverse Letter Triangle Pattern
+
+ABCDE
+ABCD
+ABC
+AB
+A
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = "";
+            for(let j = 0 ; j < n - i ; j++){
+                rows += String.fromCharCode(65 + j)
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printM()
+
+ 
+ */
+
+
+/** Q - 16 Alpha-Ramp Pattern
+ 
+A
+BB
+CCC
+DDDD
+EEEEE
+
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = ""
+            for(let j = 0 ; j <= i ; j++){
+                rows += String.fromCharCode(65+ i);
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printM()
+ */
+
+
+/**Q-17 Alpha-Hill Pattern 
+
+   A
+  ABA
+ ABCBA
+ABCDCBA
+
+
+let n = 4
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = "";
+            for(let j = 1 ; j <= n - i - 1 ; j++){
+                rows += " "
+            }
+            for(let j = 0 ; j <=  i ; j++){
+                rows+= String.fromCharCode(65+j)
+            }
+            for(let j = i-1 ; j >= 0 ; j--){
+                rows+= String.fromCharCode(65+j)
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printM()
+ */
+
+
+
+
+/** Q - 18 Alpha-Triangle Pattern
+
+
+
+E
+DE
+CDE
+BCDE
+ABCDE
+
+
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let row = "";
+            for(let j = n - i - 1 ; j< n ; j++){
+                row+= String.fromCharCode(65+j)
+            }
+            console.log(row)
+        }
+    }
+};
+
+const u1 = new Solution();
+u1.printM()
+
+ */
