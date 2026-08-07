@@ -205,7 +205,7 @@ Logic :
 
 rows
 Space    ( N - i - 1 ) 
-star     ( 2 * N + 1 ) ---   2 * that's why because we expecting star by moving in ODD 1 , 3 , 5 , 7 , 9 
+star     ( 2 * i + 1 ) ---   2 * that's why because we expecting star by moving in ODD 1 , 3 , 5 , 7 , 9 
 space    ( N - i - 1 )
 
 
@@ -655,3 +655,285 @@ const u1 = new Solution();
 u1.printM()
 
  */
+
+/**Q - 19 Symmetric-Void Pattern
+
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+
+let n = 5
+class Solution{
+    printR(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = "";
+            for(let j = 1 ; j <=  n -  i ; j++){
+                rows += "*"
+            }
+            for(let j = 1; j<= 2 * i ; j++){
+                rows += " "
+            }
+            for(let j =1  ; j <= n - i ; j++){
+                rows += "*"
+            }
+            console.log(rows)
+        }
+    }
+    printE(){
+        for(let i = 1 ; i <= n ; i++){
+            let rows = "";
+            for(let j = 1; j <= i; j++ ){
+                rows += "*"
+            }
+            for(let j = 1 ; j <= 2 * ( n - i  ); j++){
+                rows += " "
+            }
+            for(let j = 1 ; j <=  i ; j++){
+                rows += "*"
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printR()
+u1.printE()
+ */
+
+// let n = 5
+// class Solution{
+//     printE(){
+//         for(let i = 0 ; i < n ; i++){
+//             let rows = "";
+//             for(let j = 0 ; j <= i; j++){
+//                 rows += "*"
+//             }
+//             for(let j = 1 ; j <= 2 * ( n - i - 1); j++){
+//                 rows += " "
+//             }
+//             for(let j = i; j >= 0 ; j-- ){
+//                 rows += "*"
+//             }
+//             console.log(rows)
+//         }
+//     }
+//     printM(){
+//         for(let i = 1 ; i <= n ; i++){
+//             let rows = "";
+//             for(let j = 1 ; j<= n - i; j++ ){
+//                 rows += "*"
+//             }
+//             for(let j = 1 ; j <= 2 * i ; j++){
+//                 rows += " "
+//             }
+//             for(let j = i ; j <= n - 1 ; j++){
+//                 rows += "*"
+//             }
+//             console.log(rows)
+//         }
+//     }
+
+// };
+
+// const u1 = new Solution()
+// u1.printE()
+// u1.printM()
+
+
+
+/**Hallow Rectangle question
+  j
+    0 1 2 3
+i -------------
+0 | * * * *
+1 | *     *
+2 | *     *
+3 | * * * *
+
+
+--Output 
+
+****
+*  *
+*  *
+****
+
+
+ */
+
+
+// let n = 4
+// // let cols = 7 
+// class Solution{
+//     printM(){
+//         for(let i = 0 ; i < n ; i++){
+//             let rows = "";
+//             for(let j = 0; j < n ; j++){
+//                 if(
+//                     i === 0 ||
+//                     j === 0 ||
+//                     i === n- 1 ||
+//                     j === n - 1 
+//                 ){
+//                     rows += "*"
+//                 }else {
+//                     rows += " "
+//                 }
+//             }
+//             console.log(rows)
+//         }
+//     }
+// };
+// const u1 = new Solution();
+// u1.printM()
+
+
+
+
+
+/** Hollow right triangle 
+
+*
+**
+* *
+*  *
+*****
+
+
+
+
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = "";
+            for(let j = 0 ; j <= i ; j++){
+                if(
+                    i === 0 ||
+                    j === 0 ||
+                    i ===  n - 1 ||
+                    j ===  i
+                ){
+                    rows += "*"
+                }else{
+                    rows += " "
+                }
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution()
+u1.printM()
+
+
+
+
+
+
+Explanation 
+
+i === 0      // false
+j === 0      // false
+i === n-1    // false
+j === i      // 1==2 false
+
+Everything is false
+
+Print
+
+(space)
+
+
+
+Position (2,2)
+j === i
+
+True
+
+Print
+
+*
+
+Row becomes
+
+* *
+ */
+
+
+/** Level 4: Hollow Inverted Right Triangle
+ 
+*****
+*  *
+* *
+**
+*
+
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = ""
+            for(let j = 0 ; j < n - i ; j++){
+                if(
+                    i === n - 1 ||
+                    j === 0 ||
+                    i === 0 ||
+                    j ===  n - 1 - i
+                ){
+                    rows += "*"
+                }else{
+                    rows += " "
+                }
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution();
+u1.printM();
+ */
+
+
+/**Hollow Pyramid 
+ * 
+ */
+
+let n = 5
+class Solution{
+    printM(){
+        for(let i = 0 ; i < n ; i++){
+            let rows = ""
+            for(let j = 0; j < n - i - 1; j++){
+                rows += " "
+            }
+            for(let j = 0 ; j < 2 * i + 1 ; j++ ){
+                if(
+                   i === 0 ||
+                   j === 0 ||
+                   i === n - 1||
+                   j === 2 * i 
+                ){
+                    rows+= "*"
+                }else{
+                    rows+= " "
+                }
+            }
+            for(let j = 0 ; j < n - i - 1 ; j++){
+                rows += " "
+            }
+            console.log(rows)
+        }
+    }
+};
+const u1 = new Solution()
+u1.printM()
