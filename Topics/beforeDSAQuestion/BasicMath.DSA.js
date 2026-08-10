@@ -192,3 +192,39 @@
 // };
 // const u1 = new Solution()
 // u1.printM(1234334556557)
+
+
+class Solution {
+    printArmStrong(n) {
+        let original = n;
+        let count = 0;
+        let sum = 0;
+
+        while (n > 0) {
+            n = Math.floor(n / 10)
+            count++
+        }
+        // reeet n 
+        n = original
+        while (n > 0) {
+            let digit = n % 10;
+            n = Math.floor(n / 10);
+            sum = sum + digit ** count
+
+        }
+        console.log("Digit:", count)
+        console.log("Sum:", sum)
+        console.log("Original:", original)
+
+        if (sum == original) {
+            console.log("Yes it is ArmStrong")
+        } else {
+            console.log("No it is not")
+        }
+    }
+};
+
+const u1 = new Solution();
+u1.printArmStrong(407)
+
+
